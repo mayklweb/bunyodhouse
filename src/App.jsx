@@ -12,12 +12,12 @@ function App() {
   return (
     <>
       <Header />
-      <main className="flex-auto top-0 z-[1]">
+      <main className="flex-auto aabsolute top-0 z-[1]">
         <Banner />
         <Project/>
         <Comments/>
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }
