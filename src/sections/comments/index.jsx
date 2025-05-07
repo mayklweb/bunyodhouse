@@ -19,9 +19,9 @@ import {
 
 function Comments() {
   return (
-    <div className="">
+    <div className="hidden">
       <div className="container">
-        <div className="mt-12">
+        <div className="mt-16">
           <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-center text-[#000000]">
             MAMNUN MIJOZLAR FIKRI
           </h2>

@@ -27,7 +27,7 @@ function Banner() {
   }, []);
 
   return (
-    <div className="w-full h-[300px] sm:h-[400px] md:h-[600px] lg:h-[800px] bg-no-repeat bg-cover bg-[url('/banner.webp')] ">
+    <div className="w-full h-[400px] sm:h-[500px] md:h-[600px] lg:h-[800px] bg-no-repeat bg-cover bg-[url('/banner.webp')] ">
       <div className="w-full h-full bg-gradient-to-b from-[#00000000] via-[#ffffff00] to-[#ffffff]">
         <div className="container">
           <div className="pt-16 sm:pt-20 md:pt-24 lg:pt-28 flex flex-col justify-center items-start h-full">
@@ -41,7 +41,7 @@ function Banner() {
                 </span>
               </span>
             </h1>
-            <p className="text-[#e8a900] text-4xl sm:text-6xl md:text-8xl lg:text-[124px] overflow-hidden font-black">
+            <p className="text-[#e8a900] text-5xl sm:text-6xl md:text-8xl lg:text-[124px] overflow-hidden font-black">
               <span className="flex overflow-hidden">
                 <span
                   ref={(el) => (homeSubtitle.current[0] = el)}
