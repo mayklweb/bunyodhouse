@@ -27,7 +27,7 @@ function Banner() {
   }, []);
 
   return (
-    <div className="absolute top-0 z-[0] w-full h-[300px] sm:h-[400px] md:h-[600px] lg:h-[800px] bg-no-repeat bg-cover bg-[url('./public/banner.webp')] ">
+    <div className="absolute top-0 z-[0] w-full h-[300px] sm:h-[400px] md:h-[600px] lg:h-[800px] bg-no-repeat bg-cover bg-[url('/banner.webp')] ">
       <div className="w-full h-full bg-gradient-to-b from-[#00000000] via-[#ffffff00] to-[#ffffff]">
         <div className="container">
           <div className="pt-16 sm:pt-20 md:pt-24 lg:pt-28 flex flex-col justify-center items-start h-full">
