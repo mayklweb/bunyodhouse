@@ -19,7 +19,7 @@ import {
 
 function Comments() {
   return (
-    <div className="hidden">
+    <div className="">
       <div className="container">
         <div className="mt-16">
           <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-center text-[#000000]">
@@ -75,8 +75,8 @@ function Comments() {
             </SwiperSlide>
           </Swiper>
 
-          <div className="flex mt-10 gap-10 align-top justify-between">
-            <div className="w-1/3 p-6 text-white bg-[#e8a900]">
+          <div className="flex flex-col lg:flex-row my-10 gap-10 align-top justify-between">
+            <div className="w-full lg:w-1/3 p-6 text-white bg-[#e8a900]">
               <h3 className="text-5xl font-semibold">Katta rahmat!</h3>
               <p className="text-xl mt-4">
                 Uy sotib olganimizdan judayam xursandmiz. Narxlar arzon va uylar
@@ -86,7 +86,7 @@ function Comments() {
                 <p className="text-2xl">— G'oybu, Alisher</p>
               </div>
             </div>
-            <div className="w-1/3 p-6 text-white bg-[#e8a900]">
+            <div className="w-full lg:w-1/3 p-6 text-white bg-[#e8a900]">
               <h3 className="text-5xl font-semibold">
                 Hammaga tavsiya qilaman!
               </h3>
@@ -98,7 +98,7 @@ function Comments() {
                 <p className="text-xl">— Urganch, Sarvar</p>
               </div>
             </div>
-            <div className="w-1/3 p-6 text-white bg-[#e8a900]">
+            <div className="w-full lg:w-1/3 p-6 text-white bg-[#e8a900]">
               <h3 className="text-5xl font-semibold"> Ajoyib narxlar!</h3>
               <p className="text-xl mt-4">
                 Yaqinda oilamiz uchun uy sotib oldik. Sifatiga gap yuq. "Bunyod
