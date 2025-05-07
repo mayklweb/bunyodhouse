@@ -21,9 +21,9 @@ function Header() {
     });
   }, []);
   return (
-    <header className="header" ref={(el) => (header.current[0] = el)}>
+    <header className="header w-full fixed top-0 z-10 bg-white/30 backdrop-blur-md" ref={(el) => (header.current[0] = el)}>
       <div className="container">
-        <div className="py-6 flex justify-between items-center relative z-[2]">
+        <div className="w-full py-6 flex justify-between items-center">
           <button className="lg:hidden">
             <AlignJustify />
           </button>

@@ -12,8 +12,7 @@ function App() {
   return (
     <>
       <Header />
-      <main className="flex-auto absolute top-0 z-[1]">
-        <div className="loading"></div>
+      <main className="flex-auto top-0 z-[1]">
         <Banner />
         <Project/>
         <Comments/>
