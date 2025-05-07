@@ -75,7 +75,7 @@ function Comments() {
             </SwiperSlide>
           </Swiper>
 
-          <div className="hidden  mt-10 gap-10 align-top justify-between">
+          <div className="flex mt-10 gap-10 align-top justify-between">
             <div className="w-1/3 p-6 text-white bg-[#e8a900]">
               <h3 className="text-5xl font-semibold">Katta rahmat!</h3>
               <p className="text-xl mt-4">

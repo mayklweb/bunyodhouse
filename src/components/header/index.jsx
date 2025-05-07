@@ -21,14 +21,14 @@ function Header() {
     });
   }, []);
   return (
-    <header className="header w-full fixed top-0 z-10 bg-white/30 backdrop-blur-md" ref={(el) => (header.current[0] = el)}>
+    <header className="header w-full fixed top-0 z-10 bg-white/10 backdrop-blur-md" ref={(el) => (header.current[0] = el)}>
       <div className="container">
         <div className="w-full py-6 flex justify-between items-center">
           <button className="lg:hidden">
             <AlignJustify />
           </button>
-          <div className="hidden lg:flex gap-4">
-            <Link to={"main"}>ASOSIY</Link>
+          <div className="hidden lg:flex gap-4 ">
+            <Link className="text-[#e8a900]" to={"main"}>ASOSIY</Link>
             <Link to={"main"}>BIZNING LOYIHALAR</Link>
             <Link to={"main"}>BIZ HAQIMIZDA</Link>
           </div>
