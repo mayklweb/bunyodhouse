@@ -10,26 +10,25 @@ function Project() {
 
   useEffect(() => {
     gsap.set(projectImg.current, {
-      clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)",
+      clipPath: "polygon(0 0%, 100% 0%, 100% 0%, 0% 0%)", // collapsed at top
     });
-
+    
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: projectImg.current,
-        // markers: true,
         start: "top center",
         end: "center top",
         scrub: 1,
         toggleActions: "play none none none",
-        // toggleActions: "re none none none",
       },
     });
-
+    
     tl.to(projectImg.current, {
-      clipPath: "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
+      clipPath: "polygon(0 0%, 100% 0%, 100% 100%, 0% 100%)", // fully revealed from top to bottom
       ease: "power4.out",
-      duration: 2.6,
+      duration: 2.4,
     });
+    
 
     document.fonts.ready.then(() => {
       let containers = gsap.utils.toArray(".con");
