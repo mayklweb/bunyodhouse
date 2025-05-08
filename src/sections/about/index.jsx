@@ -37,43 +37,7 @@ function About() {
       year: "2023",
       type: "House",
       room: 4,
-    },
-    {
-      id: 1,
-      image: "/project.webp",
-      area: "110.34 m2",
-      location: "Urganch, G'oybu",
-      year: "2023",
-      type: "House",
-      room: 4,
-    },
-    {
-      id: 1,
-      image: "/project.webp",
-      area: "110.34 m2",
-      location: "Urganch, G'oybu",
-      year: "2023",
-      type: "House",
-      room: 4,
-    },
-    {
-      id: 1,
-      image: "/project.webp",
-      area: "110.34 m2",
-      location: "Urganch, G'oybu",
-      year: "2023",
-      type: "House",
-      room: 4,
-    },
-    {
-      id: 1,
-      image: "/project.webp",
-      area: "110.34 m2",
-      location: "Urganch, G'oybu",
-      year: "2023",
-      type: "House",
-      room: 4,
-    },
+    }
   ];
 
   return (
