@@ -66,7 +66,7 @@ function Project() {
       <div className="w-full px-[4%] flex flex-col md:flex-row gap-10">
         <div className="w-full md:w-2/4 mt-4 lg:mt-14">
           <div className="con">
-            <h1 className="split text-4xl lg:text-7xl font-extrabold text-center">
+            <h1 className="split text-[#e8a900] text-4xl lg:text-7xl font-extrabold text-center">
               BUNYOD HOUSE
             </h1>
           </div>

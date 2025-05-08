@@ -21,7 +21,7 @@ function Header() {
     });
   }, []);
   return (
-    <header className="header w-full fixed top-0 z-10 bg-white/10 backdrop-blur-md" ref={(el) => (header.current[0] = el)}>
+    <header className="header w-full fixed top-0 z-10 bg-white/50 backdrop-blur-md" ref={(el) => (header.current[0] = el)}>
       <div className="container">
         <div className="w-full py-6 flex justify-between items-center">
           <button className="lg:hidden">
