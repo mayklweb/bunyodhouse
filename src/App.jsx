@@ -19,7 +19,7 @@ function App() {
         <Comments/>
         <Contact/>
       </main>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }

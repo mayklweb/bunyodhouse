@@ -7,7 +7,7 @@ function About() {
 
   useEffect(() => {
     gsap.set(projectImg.current, {
-      clipPath: "polygon(0 0%, 100% 0%, 100% 0%, 0% 0%)", // collapsed at top
+      clipPath: "polygon(0 0%, 100% 0%, 100% 0%, 0% 0%)",
     });
 
     const tl = gsap.timeline({
@@ -21,7 +21,7 @@ function About() {
     });
 
     tl.to(projectImg.current, {
-      clipPath: "polygon(0 0%, 100% 0%, 100% 100%, 0% 100%)", // fully revealed from top to bottom
+      clipPath: "polygon(0 0%, 100% 0%, 100% 100%, 0% 100%)",
       ease: "power4.out",
       duration: 2.4,
     });
@@ -58,7 +58,7 @@ function About() {
 
   return (
     <div className="mt-10">
-      <div className="w-full bg-no-repeat bg-center bg-cover bg-[url('/about.png')] px-[4%] flex flex-col md:flex-row gap-10">
+      <div className="w-full bg-no-repeat bg-center bg-cover bg-[url('/about.webp')] px-[4%] flex flex-col md:flex-row gap-10">
         <div className="w-full  mt-4 xs:mt-6 md:mt-8 py-6 lg:mt-10`">
           <div className="con">
             <h1 className="split text-[#e8a900] text-4xl lg:text-9xl font-extrabold text-center">
