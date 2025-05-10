@@ -1,12 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
     <footer className="mt-14">
       <div className="w-full bg-no-repeat bg-top bg-cover bg-[url('/footer.webp')]">
         <div className="container">
-          <div className="grid grid-row-3 lg:grid-cols-3 justify-between pt-[80px]">
-            <div className="w-full flex flex-col items-center">
+          <div className="grid grid-row-3 lg:grid-cols-3 justify-between pt-[80px] pb-[60px]">
+            <div className="w-3/4 flex flex-col items-center">
               <div className="w-full">
                 <img src="/logo.svg" alt="" />
               </div>
@@ -70,11 +71,10 @@ function Footer() {
           </div>
         </div>
       </div>
-      <div className="container bg-black w-full h-[80px] flex flex-col items-center justify-center">
+      <div className="container bg-black w-full h-[40px] flex flex-col items-center justify-center">
         <p className="text-white text-xs">
-          © 2022 Bunyod House. Barcha huquqlar himoyalangan.
+          © 2022 Bunyod House. Developed by <a href='https://t.me/maykl_web' target="_black">MAYKL</a>.
         </p>
-        <p className="text-white text-xs mt-2">Developed by Myakl</p>
       </div>
     </footer>
   );
