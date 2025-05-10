@@ -28,9 +28,9 @@ function Contact() {
   }, []);
 
   return (
-    <div>
+    <div className="hidden">
       <h2>Contact Us</h2>
-      <div className="w-full flex relative">
+      <div className="w-full flex relative flex-col ">
         <div className="w-2/4 h-[400px] relative shadow-[inset_0px_0px_20px_10px_#ffffff]">
           <div
             id="map"
