@@ -23,7 +23,7 @@ function Header() {
   return (
     <header className="header w-full fixed top-0 z-10 bg-white backdrop-blur-md" ref={(el) => (header.current[0] = el)}>
       <div className="container">
-        <div className="w-full py-6 flex justify-between items-center">
+        <div className="w-full py-4 md:py-6 lg:py-10 flex justify-between items-center">
           <button className="lg:hidden">
             <AlignJustify />
           </button>
@@ -33,7 +33,13 @@ function Header() {
             <Link to={"main"}>BIZ HAQIMIZDA</Link>
           </div>
           <div className="top-2/4 left-2/4 transform-gpu -translate-x-2/4 -translate-y-2/4 absolute"> 
-            <h1>LOGO</h1>
+            <Link to={"/"}>
+              <img
+                src="/logo-black.svg"
+                alt="logo"
+                className="w-14 lg:w-24 object-contain"
+              />
+            </Link>
           </div>
           <button className="lg:hidden">
             <Phone size={24} strokeWidth={1.5} />

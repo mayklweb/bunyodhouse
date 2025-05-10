@@ -5,14 +5,11 @@ function Footer() {
     <footer className="mt-14">
       <div className="w-full bg-no-repeat bg-top bg-cover bg-[url('/footer.webp')]">
         <div className="container">
-          <div className="grid lg:grid-cols-3 gap-6 py-20">
+          <div className="grid grid-row-3 lg:grid-cols-3 justify-between pt-[80px]">
             <div className="w-full flex flex-col items-center">
-              <div className="w-[80%]">
-                <img src="/logo.png" alt="" />
+              <div className="w-full">
+                <img src="/logo.svg" alt="" />
               </div>
-              <h1 className="text-white text-4xl lg:text-[54px] font-extrabold">
-                BUNYOD HOUSE
-              </h1>
               <p className="text-white font-marcellus text-justify mt-2">
                 "Bunyod House" qurilish firmasi Xorazm viloyatida 2019-yilda
                 tashkil topgan. Faoliyatimizning birinchi kunlaridan boshlab biz
