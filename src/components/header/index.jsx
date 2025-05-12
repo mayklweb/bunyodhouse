@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import gsap from "gsap";
 
@@ -10,18 +10,39 @@ gsap.registerPlugin(Flip, ScrollTrigger);
 function Header() {
   const header = useRef([]);
 
-  useEffect(() => {
-    gsap.set(header.current, { yPercent: -100 });
+  // useEffect(() => {
+  //   gsap.set(header.current, { yPercent: -100 });
 
-    const tl = gsap.timeline({ delay: 0.4 });
-    tl.to([document.querySelector(".header")], {
-      yPercent: 0,
-      duration: 1.4,
-      ease: "power2.inOut",
-    });
+  //   const tl = gsap.timeline({ delay: 0.4 });
+  //   tl.to([document.querySelector(".header")], {
+  //     yPercent: 0,
+  //     duration: 1.4,
+  //     ease: "power2.inOut",
+  //   });
+  // }, []);
+
+  const [hidden, setHidden] = useState(false);
+  let lastScroll = 0;
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScroll = window.scrollY;
+
+      if (currentScroll > lastScroll && currentScroll > 100) {
+        setHidden(true); // scroll down -> hide
+      } else {
+        setHidden(false); // scroll up -> show
+      }
+
+      lastScroll = currentScroll;
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
   return (
-    <header className="header w-full fixed top-0 z-10 bg-white backdrop-blur-md" ref={(el) => (header.current[0] = el)}>
+    <header className={`main-header ${hidden ? 'hide' : ''} header w-full fixed top-0 z-10 bg-white backdrop-blur-md`}ref={(el) => (header.current[0] = el)}>
       <div className="container">
         <div className="w-full py-4 md:py-6 lg:py-10 flex justify-between items-center">
           <button className="lg:hidden">

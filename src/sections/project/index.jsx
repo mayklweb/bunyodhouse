@@ -46,11 +46,14 @@ function Project() {
   ];
 
   return (
-    <div className="mt-16">
+    <div>
       <div className="container">
-        <div className="grid grid-row-4 md:grid-cols-4 gap-10">
+        <div className="grid grid-row-4 md:grid-cols-4 gap-10 py-10">
           {data.map((item, i) => (
-            <div key={i} className="w-full p-5 border border-[#e8a900] flex flex-col gap-5">
+            <div
+              key={i}
+              className="w-full p-5 border border-[#e8a900] flex flex-col gap-5"
+            >
               <div>
                 <img src={item.image} alt="" />
               </div>

@@ -1,5 +1,5 @@
 import About from "./about";
-import Advantages from "./advantages";
+import Advantages from "./info";
 import Banner from "./banner";
 import Comments from "./comments";
 import Contact from "./contact";

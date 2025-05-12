@@ -42,16 +42,16 @@ function About() {
           return gsap.from(self.lines, {
             scrollTrigger: {
               trigger: self.lines[0],
-              start: "top 80%",
+              start: "top 60%",
               end: "center top",
-              scrub: 2,
-              toggleActions: "complete none none none",
+              scrub: 3,
+              toggleActions: "none none none none", // <-- This is the issue
             },
-            duration: 1,
+            duration: 5,
             yPercent: 100,
             opacity: 0,
-            stagger: 0.1,
-            ease: "expo.out",
+            stagger: 1,
+            ease: "power4",
           });
         },
       });
@@ -59,7 +59,7 @@ function About() {
   }, []);
 
   return (
-    <div className="mt-10">
+    <div className="py-10">
       <div className="w-full bg-no-repeat bg-center bg-cover bg-[url('/about.webp')] px-[4%] flex flex-col md:flex-row gap-10">
         <div className="w-full  mt-4 xs:mt-6 md:mt-8 py-6 lg:mt-10`">
           <div className="con">
