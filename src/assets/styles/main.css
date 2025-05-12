@@ -47,6 +47,7 @@ body,
   user-select: none;
   display: flex;
   flex-direction: column;
+  background: #fffefa;
 }
 
 .container {

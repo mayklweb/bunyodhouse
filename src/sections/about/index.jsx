@@ -1,57 +1,59 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import SplitText from "gsap/SplitText";
+import ScrollTrigger from "gsap/ScrollTrigger";
+gsap.registerPlugin(SplitText, ScrollTrigger);
 
 function About() {
   const projectImg = useRef(null);
 
   useEffect(() => {
+    // Scroll-triggered animation for image
     gsap.set(projectImg.current, {
       clipPath: "polygon(0 0%, 100% 0%, 100% 0%, 0% 0%)",
     });
 
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: projectImg.current,
-        start: "top center",
-        end: "center top",
-        scrub: 1,
-        toggleActions: "play none none none",
-      },
-    });
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: projectImg.current,
+          start: "top center",
+          end: "center top",
+          scrub: 1,
+          toggleActions: "play none none none",
+        },
+      })
+      .to(projectImg.current, {
+        clipPath: "polygon(0 0%, 100% 0%, 100% 100%, 0% 100%)",
+        ease: "power4.out",
+        duration: 2.4,
+      });
 
-    tl.to(projectImg.current, {
-      clipPath: "polygon(0 0%, 100% 0%, 100% 100%, 0% 100%)",
-      ease: "power4.out",
-      duration: 2.4,
-    });
-
+    // SplitText animation
     document.fonts.ready.then(() => {
-      let containers = gsap.utils.toArray(".con");
+      gsap.set(".split", { opacity: 1 });
 
-      containers.forEach((container) => {
-        let text = container.querySelector(".split");
-        let animation;
-
-        SplitText.create(text, {
-          type: "words,lines",
-          mask: "lines",
-          linesClass: "line",
-          autoSplit: true,
-          onSplit: (instance) => {
-            return gsap.from(instance.lines, {
-              yPercent: 120,
-              stagger: 0.1,
-              scrollTrigger: {
-                trigger: container,
-                // markers: true,
-                scrub: true,
-                start: "clamp(top center)",
-                end: "clamp(bottom center)",
-              },
-            });
-          },
-        });
+      const split = SplitText.create(".split", {
+        type: "words,lines",
+        linesClass: "line",
+        autoSplit: true,
+        mask: "lines",
+        onSplit: (self) => {
+          return gsap.from(self.lines, {
+            scrollTrigger: {
+              trigger: self.lines[0],
+              start: "top 80%",
+              end: "center top",
+              scrub: 2,
+              toggleActions: "complete none none none",
+            },
+            duration: 1,
+            yPercent: 100,
+            opacity: 0,
+            stagger: 0.1,
+            ease: "expo.out",
+          });
+        },
       });
     });
   }, []);
@@ -61,7 +63,7 @@ function About() {
       <div className="w-full bg-no-repeat bg-center bg-cover bg-[url('/about.webp')] px-[4%] flex flex-col md:flex-row gap-10">
         <div className="w-full  mt-4 xs:mt-6 md:mt-8 py-6 lg:mt-10`">
           <div className="con">
-            <h1 className="split text-[#e8a900] text-4xl lg:text-9xl font-extrabold text-center">
+            <h1 className=" text-[#e8a900] text-4xl lg:text-9xl font-extrabold text-center">
               BUNYOD HOUSE
             </h1>
           </div>
@@ -90,15 +92,6 @@ function About() {
             </h3>
           </div>
         </div>
-
-        {/* <div className="w-full md:w-2/4">
-          <img
-            ref={projectImg}
-            src="/project-home-2.webp"
-            alt=""
-            className="w-full"
-          />
-        </div> */}
       </div>
     </div>
   );
