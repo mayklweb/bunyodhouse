@@ -14,7 +14,7 @@ function Info() {
         scrollTrigger: {
           trigger: sectionRef.current,
           start: "top top",
-          end: "+=2000", // adjust scroll distance
+          end: "+=1800", // adjust scroll distance
           scrub: true,
           pin: true,
           markers: false,
