@@ -19,7 +19,7 @@ function Info() {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: sectionRef.current,
-          start: "top top",
+          start: "top 40px",
           end: "+=2000", // enough scroll distance
           scrub: true,
           pin: true,
@@ -46,7 +46,7 @@ function Info() {
 
   return (
     <section className="relative">
-      <div className="scene" ref={sectionRef}>
+      <div className="scene pt-10" ref={sectionRef}>
         <div className="container py-20">
           <h1 className="text-4xl text-[#FFC045] mb-10">Info</h1>
 
@@ -84,9 +84,9 @@ function Info() {
           </div>
 
           {/* Background Image */}
-          <div className="w-full absolute bottom-0 right-0 z-[-1] flex justify-end items-end">
+          {/* <div className="w-full absolute bottom-0 right-0 z-[-1] flex justify-end items-end">
             <img className="w-[40%]" src="/info.webp" alt="" />
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
