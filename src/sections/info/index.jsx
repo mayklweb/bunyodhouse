@@ -27,7 +27,7 @@ function Info() {
           line,
           {
             autoAlpha: 0,
-            y: 30,
+            y: 40,
             duration: 1,
           },
           "+=0.5"
