@@ -53,10 +53,10 @@ function Header() {
 
   return (
     <header
-      className={` header w-full fixed top-0 left-0 z-10 `}
+      className={`header w-full fixed top-0 left-0 z-10 `}
       ref={(el) => (header.current[0] = el)}
     >
-      <div className="header-row bg-white w-full py-4 md:py-6 lg:py-10 flex justify-between items-center transition-all ease duration-500">
+      <div className="header-row bg-white w-full py-4 md:py-6 lg:py-8 flex justify-between items-center transition-all ease duration-500">
         <div className="container">
           <div className=" flex justify-between items-center relative">
             <button className="lg:hidden">
@@ -74,7 +74,7 @@ function Header() {
                 <img
                   src="/logo.svg"
                   alt="logo"
-                  className="w-14 lg:w-24 object-contain"
+                  className="w-14 lg:w-20 object-contain"
                 />
               </Link>
             </div>
