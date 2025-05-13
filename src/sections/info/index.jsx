@@ -22,7 +22,7 @@ function Info() {
         scrollTrigger: {
           trigger: sectionRef.current,
           start: "top 40px",
-          end: "+=2000", // enough scroll distance
+          end: "+=1600", // enough scroll distance
           scrub: true,
           pin: true,
         },
@@ -33,7 +33,7 @@ function Info() {
         tl.to(
           line,
           {
-            autoAlpha: 1,
+            autoAlpha: 2,
             y: 0,
             duration: 1,
             ease: "power2.out",
@@ -49,7 +49,7 @@ function Info() {
   return (
     <section className="">
       <div className="scene pt-10" ref={sectionRef}>
-        <div className=" py-20">
+        <div className="container py-20">
           <h1 className="text-4xl text-[#FFC045] mb-10">Info</h1>
 
           <div className="flex flex-col gap-10">
@@ -59,7 +59,8 @@ function Info() {
             >
               <h1 className="text-[#FFC045] text-2xl lg:text-3xl">01.</h1>
               <h1 className="text-[#030303] text-3xl lg:text-4xl">
-                Biz mijozlarimiz uchun eng qulay narxlarni taqdim etamiz.
+                "Bunyod House" uylari o'zining zamonaviy dizayni bilan ajralib
+                turadi.
               </h1>
             </div>
 
@@ -69,8 +70,7 @@ function Info() {
             >
               <h1 className="text-[#FFC045] text-2xl lg:text-3xl">02.</h1>
               <h1 className="text-[#030303] text-3xl lg:text-4xl">
-                "Bunyod House" uylari o'zining zamonaviy dizayni bilan ajralib
-                turadi.
+                Biz mijozlarimiz uchun eng qulay narxlarni taqdim etamiz.
               </h1>
             </div>
 
