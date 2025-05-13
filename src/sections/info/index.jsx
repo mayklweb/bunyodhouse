@@ -1,4 +1,4 @@
-import React, { useRef, useLayoutEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
@@ -8,25 +8,27 @@ function Info() {
   const sectionRef = useRef(null);
   const linesRef = useRef([]);
 
-  useLayoutEffect(() => {
-    if (typeof window === "undefined") return;
+  if (!linesRef.current.every(Boolean)) return;
 
+  useEffect(() => {
     const ctx = gsap.context(() => {
-      // Hide all initially
-      gsap.set(linesRef.current, { autoAlpha: 0, y: 50 });
+      // Set all lines to be hidden initially
+      gsap.set(linesRef.current, {
+        autoAlpha: 0,
+        y: 40,
+      });
 
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: sectionRef.current,
-          start: "top top",
-          end: "+=2000",
+          start: "top 40px",
+          end: "+=2000", // enough scroll distance
           scrub: true,
           pin: true,
-          markers: false, // debugging uchun true qilib tekshir
         },
       });
 
-      // One by one animation
+      // Animate each line one by one based on timeline
       linesRef.current.forEach((line, i) => {
         tl.to(
           line,
@@ -36,7 +38,7 @@ function Info() {
             duration: 1,
             ease: "power2.out",
           },
-          i * 1.5 // delay between lines
+          i * 1 // each line starts later in the timeline
         );
       });
     }, sectionRef);
@@ -45,29 +47,48 @@ function Info() {
   }, []);
 
   return (
-    <section className="relative bg-white">
-      <div className="pt-10" ref={sectionRef}>
-        <div className="max-w-4xl mx-auto px-4 py-20">
+    <section className="relative">
+      <div className="scene pt-10" ref={sectionRef}>
+        <div className=" py-20">
           <h1 className="text-4xl text-[#FFC045] mb-10">Info</h1>
 
-          <div className="flex flex-col gap-16">
-            {[
-              "Biz mijozlarimiz uchun eng qulay narxlarni taqdim etamiz.",
-              '"Bunyod House" uylari o‘zining zamonaviy dizayni bilan ajralib turadi.',
-              "Qurilishda yuqori sifatli materiallar ishlatiladi.",
-            ].map((text, index) => (
-              <div
-                key={index}
-                className={`info-line flex gap-4 ml-${index * 20 + 20}`}
-                ref={(el) => (linesRef.current[index] = el)}
-              >
-                <h2 className="text-[#FFC045] text-2xl lg:text-3xl">
-                  0{index + 1}.
-                </h2>
-                <p className="text-[#030303] text-3xl lg:text-4xl">{text}</p>
-              </div>
-            ))}
+          <div className="flex flex-col gap-10">
+            <div
+              className="info-line w-3/4 flex gap-4 ml-[20px] lg:ml-[40px]"
+              ref={(el) => (linesRef.current[0] = el)}
+            >
+              <h1 className="text-[#FFC045] text-2xl lg:text-3xl">01.</h1>
+              <h1 className="text-[#030303] text-3xl lg:text-4xl">
+                Biz mijozlarimiz uchun eng qulay narxlarni taqdim etamiz.
+              </h1>
+            </div>
+
+            <div
+              className="info-line w-3/4 flex gap-4 ml-[40px] lg:ml-[80px]"
+              ref={(el) => (linesRef.current[1] = el)}
+            >
+              <h1 className="text-[#FFC045] text-2xl lg:text-3xl">02.</h1>
+              <h1 className="text-[#030303] text-3xl lg:text-4xl">
+                "Bunyod House" uylari o'zining zamonaviy dizayni bilan ajralib
+                turadi.
+              </h1>
+            </div>
+
+            <div
+              className="info-line w-3/4 flex gap-4 ml-[80px] lg:ml-[120px]"
+              ref={(el) => (linesRef.current[2] = el)}
+            >
+              <h1 className="text-[#FFC045] text-2xl lg:text-3xl">03.</h1>
+              <h1 className="text-[#030303] text-3xl lg:text-4xl">
+                Qurilishda yuqori sifatli materiallar ishlatiladi.
+              </h1>
+            </div>
           </div>
+
+          {/* Background Image */}
+          {/* <div className="w-full absolute bottom-0 right-0 z-[-1] flex justify-end items-end">
+            <img className="w-[40%]" src="/info.webp" alt="" />
+          </div> */}
         </div>
       </div>
     </section>

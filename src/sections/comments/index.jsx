@@ -22,10 +22,10 @@ function Comments() {
     <div>
       <div className="container">
         <div className="py-10">
-          <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-center text-[#000000]">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-center text-[#FFC045]">
             MAMNUN MIJOZLAR FIKRI
           </h2>
-          <p className="text-xs sm:text-sm md:text-lg lg:text-base font-normal text-center text-[#000000]">
+          <p className="text-xs sm:text-sm md:text-lg lg:text-base font-normal text-center text-[#FFC045]">
             YUQORI SIFAT VA ARZON NARXLARDAN MAMNUN BO'LGAN BIR NECHTA
             MIZOZLARIMIZ
           </p>
