@@ -40,7 +40,9 @@ function Contact() {
         </div>
         <div className="container">
           <div className="w-full">
-            <div className="w-full">
+
+            
+            {/* <div className="w-full">
               <h1 className="text-2xl lg:text-4xl">Aloqa</h1>
               <div className="mt-4 lg:mt-10 flex flex-col gap-4">
                 <div className="flex gap-2 items-start">
@@ -73,24 +75,9 @@ function Contact() {
                     buyurtma@bunyodhouse.uz
                   </p>
                 </div>
-                <div className="flex gap-2 items-start">
-                  <h2 className="text-lg lg:text-2xl">
-                    Biz ijtimoiy tarmoqlarda:
-                  </h2>
-                  <div>
-                    <p className="text-base lg:text-xl mt-1">
-                      Instagram
-                    </p>
-                    <p className="text-base lg:text-xl">
-                      YouTube
-                    </p>
-                    <p className="text-base lg:text-xl">
-                      Telegram
-                    </p>
-                  </div>
-                </div>
+
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

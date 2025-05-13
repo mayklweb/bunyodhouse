@@ -13,7 +13,7 @@ function Project() {
       gsap.from(card, {
         y: 60,
         opacity: 0,
-        duration: 0.8,
+        duration: 1,
         ease: "power3.out",
         delay: index * 0.2,
         scrollTrigger: {
