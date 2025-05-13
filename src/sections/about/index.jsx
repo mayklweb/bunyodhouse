@@ -70,7 +70,7 @@ function About() {
             </h1>
           </div>
           <div className="con w-full mt-6 lg:mt-10 flex justify-start">
-            <h3 className="split w-5/6 md:w-2/4 text-base xs:text-lg md:text-2xl lg:text-4xl xl:text-5xl  mt-2 font-normal text-justify ">
+            <h3 className="split w-5/6 md:w-3/4 text-base xs:text-lg md:text-2xl lg:text-4xl xl:text-5xl  mt-2 font-normal text-justify ">
               "Bunyod House" qurilish firmasi Xorazm viloyatida 2019-yilda
               tashkil topgan.
             </h3>

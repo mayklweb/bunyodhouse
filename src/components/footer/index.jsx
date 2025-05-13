@@ -19,13 +19,32 @@ function Footer() {
             </div>
             <div className="flex flex-col gap-4 mt-4">
               <h1 className="text-white lg:text-4xl">Sayt haritasi</h1>
-              <div className="grid grid-cols-2 gap-3">
+              <div className="grid grid-cols-3 gap-3">
                 <p className="text-white lg:text-xl">Asosiy</p>
                 <p className="text-white lg:text-xl">Faoliyat</p>
+                <div className="flex items-center gap-2">
+                  <p className="text-white lg:text-xl">Instagram</p>
+                  <div className="w-[20px] h-[20px] text-white flex items-center justify-center">
+                    <img src="/icon.svg" alt="" />
+                  </div>
+                </div>
+
                 <p className="text-white lg:text-xl">Narxlar</p>
                 <p className="text-white lg:text-xl">Biz haqimizda</p>
+                <div className="flex items-center gap-2">
+                  <p className="text-white lg:text-xl">Telegram</p>
+                  <div className="w-[20px] h-[20px] text-white flex items-center justify-center">
+                    <img src="/icon.svg" alt="" />
+                  </div>
+                </div>
                 <p className="text-white lg:text-xl">Loyihalar</p>
                 <p className="text-white lg:text-xl">Aloqa</p>
+                <div className="flex items-center gap-2">
+                  <p className="text-white lg:text-xl">YouTube</p>
+                  <div className="w-[20px] h-[20px] text-white flex items-center justify-center">
+                    <img src="/icon.svg" alt="" />
+                  </div>
+                </div>
               </div>
             </div>
             <div className="flex flex-col gap-4 mt-4">
