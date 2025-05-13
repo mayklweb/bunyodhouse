@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import gsap from "gsap";
-
 import { Flip, ScrollTrigger } from "gsap/all";
 import { AlignJustify, Phone } from "lucide-react";
 
@@ -10,50 +9,68 @@ gsap.registerPlugin(Flip, ScrollTrigger);
 function Header() {
   const header = useRef([]);
 
-  // useEffect(() => {
-  //   gsap.set(header.current, { yPercent: -100 });
 
-  //   const tl = gsap.timeline({ delay: 0.4 });
-  //   tl.to([document.querySelector(".header")], {
-  //     yPercent: 0,
-  //     duration: 1.4,
-  //     ease: "power2.inOut",
-  //   });
-  // }, []);
-
-  const [hidden, setHidden] = useState(false);
-  let lastScroll = 0;
-
+ 
   useEffect(() => {
-    const handleScroll = () => {
-      const currentScroll = window.scrollY;
+    const headerEl = header.current;
 
-      if (currentScroll > lastScroll && currentScroll > 100) {
-        setHidden(true); // scroll down -> hide
-      } else {
-        setHidden(false); // scroll up -> show
+    // Initial entrance animation
+    gsap.fromTo(
+      headerEl,
+      { yPercent: -100 },
+      {
+        yPercent: 0,
+        duration: 1.2,
+        ease: "power2.out",
+        delay: 0.5,
       }
+    );
 
-      lastScroll = currentScroll;
+    // Scroll-triggered hide/show
+    const scrollAnim = gsap
+      .to(headerEl, {
+        yPercent: -100,
+        duration: 0.3,
+        ease: "power2.out",
+        paused: true,
+      })
+      .progress(0);
+
+    ScrollTrigger.create({
+      start: 0,
+      end: "max",
+      onUpdate: (self) => {
+        if (self.direction === 1) {
+          scrollAnim.play(); // scroll down
+        } else {
+          scrollAnim.reverse(); // scroll up
+        }
+      },
+    });
+
+    return () => {
+      ScrollTrigger.killAll();
     };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
-    <header className={`main-header ${hidden ? 'hide' : ''} header w-full fixed top-0 z-10 bg-white backdrop-blur-md`}ref={(el) => (header.current[0] = el)}>
+    <header
+      className={` header w-full fixed top-0 left-0 z-10 bg-white backdrop-blur-md transition-all ease duration-500 shadow-md`}
+      ref={(el) => (header.current[0] = el)}
+    >
       <div className="container">
-        <div className="w-full py-4 md:py-6 lg:py-10 flex justify-between items-center">
+        <div className="header-row w-full py-4 md:py-6 lg:py-10 flex justify-between items-center">
           <button className="lg:hidden">
             <AlignJustify />
           </button>
           <div className="hidden lg:flex gap-4 ">
-            <Link className="text-[#e8a900]" to={"main"}>ASOSIY</Link>
+            <Link className="text-[#e8a900]" to={"main"}>
+              ASOSIY
+            </Link>
             <Link to={"main"}>BIZNING LOYIHALAR</Link>
             <Link to={"main"}>BIZ HAQIMIZDA</Link>
           </div>
-          <div className="top-2/4 left-2/4 transform-gpu -translate-x-2/4 -translate-y-2/4 absolute"> 
+          <div className="top-2/4 left-2/4 transform-gpu -translate-x-2/4 -translate-y-2/4 absolute">
             <Link to={"/"}>
               <img
                 src="/logo-black.svg"

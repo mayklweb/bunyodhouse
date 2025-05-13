@@ -105,41 +105,6 @@ body,
   background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 10%);
 }
 
-/* .home-title {
-  font-size: 68px;
-  font-weight: 500;
-  color: rgb(0, 0, 0);
-  display: flex;
-  gap: 12px;
-  font-family: "Outfit";
-  font-size: 156px;
-  font-weight: 700;
-  line-height: 100%;
-} */
-
-/* .home-title span {
-  overflow: hidden;
-  display: block;
-} */
-
-/* .home-subtitle {
-  text-transform: uppercase;
-  display: flex;
-  gap: 14px;
-  font-family: "Outfit";
-  font-size: 128px;
-  font-weight: 700;
-  line-height: 100%;
-} */
-
-/* .home-subtitle span {
-  overflow: hidden;
-  display: block;
-}
-
- */
-
-
  .main-header {
   position: fixed;
   top: 0;
@@ -158,3 +123,7 @@ body,
 .main-header.hide {
   transform: translateY(-100%);
 }
+
+/* .header-row {
+transition: all 0.4s ease;
+} */

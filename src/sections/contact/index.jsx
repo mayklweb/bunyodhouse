@@ -41,50 +41,50 @@ function Contact() {
         <div className="container">
           <div className="w-full">
             <div className="w-full">
-              <h1 className="text-2xl lg:text-4xl font-marcellus">Aloqa</h1>
+              <h1 className="text-2xl lg:text-4xl">Aloqa</h1>
               <div className="mt-4 lg:mt-10 flex flex-col gap-4">
                 <div className="flex gap-2 items-start">
-                  <h2 className="text-lg lg:text-2xl font-marcellus">
+                  <h2 className="text-lg lg:text-2xl">
                     Manzil:
                   </h2>
-                  <p className="text-base lg:text-xl font-marcellus mt-1">
+                  <p className="text-base lg:text-xl mt-1">
                     Xorazm viloyati, Urganch tumani, Gaybu qishlogi
                   </p>
                 </div>
                 <div className="flex gap-2 items-start">
-                  <h2 className="text-lg lg:text-2xl font-marcellus">
+                  <h2 className="text-lg lg:text-2xl">
                     Telefon:
                   </h2>
                   <div>
-                    <p className="text-base lg:text-xl font-marcellus mt-1">
+                    <p className="text-base lg:text-xl mt-1">
                       +998 99 999 99 99
                     </p>
 
-                    <p className="text-base lg:text-xl font-marcellus">
+                    <p className="text-base lg:text-xl">
                       +998 99 999 99 99
                     </p>
                   </div>
                 </div>
                 <div className="flex gap-2 items-center">
-                  <h2 className="text-lg lg:text-2xl font-marcellus">
+                  <h2 className="text-lg lg:text-2xl">
                     E-mail:
                   </h2>
-                  <p className="text-base lg:text-xl font-marcellus">
+                  <p className="text-base lg:text-xl">
                     buyurtma@bunyodhouse.uz
                   </p>
                 </div>
                 <div className="flex gap-2 items-start">
-                  <h2 className="text-lg lg:text-2xl font-marcellus">
+                  <h2 className="text-lg lg:text-2xl">
                     Biz ijtimoiy tarmoqlarda:
                   </h2>
                   <div>
-                    <p className="text-base lg:text-xl font-marcellus mt-1">
+                    <p className="text-base lg:text-xl mt-1">
                       Instagram
                     </p>
-                    <p className="text-base lg:text-xl font-marcellus">
+                    <p className="text-base lg:text-xl">
                       YouTube
                     </p>
-                    <p className="text-base lg:text-xl font-marcellus">
+                    <p className="text-base lg:text-xl">
                       Telegram
                     </p>
                   </div>

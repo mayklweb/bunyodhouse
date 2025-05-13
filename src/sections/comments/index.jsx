@@ -38,7 +38,7 @@ function Comments() {
               modules={[EffectFade, Pagination]}
               className=""
             >
-              <SwiperSlide className="w-[400px] bg-[#e8a900]">
+              <SwiperSlide className="w-[400px] bg-[#FFC045]">
                 <div className="w-full md:w-1/3 p-4 md:p-6 text-white bg-[#e8a900]">
                   <h3 className="text-4xl md:text-4xl lg:text-5xl font-semibold">
                     Katta rahmat!
@@ -90,7 +90,7 @@ function Comments() {
           </div>
 
           <div className="hidden md:flex flex-col md:flex-row my-10 gap-6 md:gap-8 lg:gap-10 align-top justify-between">
-            <div className="w-full md:w-1/3 p-6 text-white bg-[#e8a900]">
+            <div className="w-full md:w-1/3 p-6 text-white bg-[#FFC045]">
               <h3 className="text-4xl md:text-4xl lg:text-5xl font-semibold">
                 Katta rahmat!
               </h3>
@@ -104,7 +104,7 @@ function Comments() {
                 </p>
               </div>
             </div>
-            <div className="w-full md:w-1/3 p-6 text-white bg-[#e8a900]">
+            <div className="w-full md:w-1/3 p-6 text-white bg-[#FFC045]">
               <h3 className="text-4xl md:text-4xl lg:text-5xl font-semibold">
                 Hammaga tavsiya qilaman!
               </h3>
@@ -117,7 +117,7 @@ function Comments() {
                 </p>
               </div>
             </div>
-            <div className="w-full md:w-1/3 p-6 text-white bg-[#e8a900]">
+            <div className="w-full md:w-1/3 p-6 text-white bg-[#FFC045]">
               <h3 className="text-4xl md:text-4xl lg:text-5xl font-semibold">
                 Ajoyib narxlar!
               </h3>

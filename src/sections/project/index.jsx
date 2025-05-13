@@ -6,7 +6,35 @@ import SplitText from "gsap/SplitText";
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
 function Project() {
+  useEffect(() => {
+    const cards = gsap.utils.toArray(".card");
+
+    cards.forEach((card, index) => {
+      gsap.from(card, {
+        y: 60,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out",
+        delay: index * 0.2,
+        scrollTrigger: {
+          trigger: card,
+          start: "top 60%",
+          toggleActions: "play none none none",
+        },
+      });
+    });
+  }, []);
+
   const data = [
+    {
+      id: 1,
+      image: "/project.webp",
+      area: "110.34 m2",
+      location: "Urganch, G'oybu",
+      year: "2023",
+      type: "House",
+      room: 4,
+    },
     {
       id: 1,
       image: "/project.webp",
@@ -48,11 +76,12 @@ function Project() {
   return (
     <div>
       <div className="container">
-        <div className="grid grid-row-4 md:grid-cols-4 gap-10 py-10">
+        <h1 className="text-4xl text-[#FFC045]">Tayor xonadonlar</h1>
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6 py-10">
           {data.map((item, i) => (
             <div
               key={i}
-              className="w-full p-5 border border-[#e8a900] flex flex-col gap-5"
+              className={`card ${i + 1 > 4 && "hidden"} w-full p-4 border border-[#e8a900] flex flex-col gap-5`}
             >
               <div>
                 <img src={item.image} alt="" />
