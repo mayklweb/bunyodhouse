@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
@@ -8,7 +8,9 @@ function Info() {
   const sectionRef = useRef(null);
   const linesRef = useRef([]);
 
-  useEffect(() => {
+  if (!linesRef.current.every(Boolean)) return;
+
+  useLayoutEffect(() => {
     const ctx = gsap.context(() => {
       // Set all lines to be hidden initially
       gsap.set(linesRef.current, {
