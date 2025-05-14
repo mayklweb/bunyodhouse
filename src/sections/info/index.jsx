@@ -6,8 +6,6 @@ import SplitText from "gsap/SplitText";
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
 function Info() {
-  const sectionRef = useRef(null);
-
   useEffect(() => {
     // SplitText animation
     document.fonts.ready.then(() => {
@@ -23,15 +21,15 @@ function Info() {
           return gsap.from(self.lines, {
             scrollTrigger: {
               trigger: self.lines[0],
-              start: "top 60%",
-              end: "center top",
+              start: "top 80%",
+              end: "center center",
               scrub: 3,
-              toggleActions: "none none none none", 
+              toggleActions: "none none none none",
             },
             duration: 5,
             yPercent: 100,
             opacity: 0,
-            stagger: 1, 
+            stagger: 1,
             ease: "power4",
           });
         },
@@ -41,11 +39,11 @@ function Info() {
 
   return (
     <section>
-      <div className="scene py-10" ref={sectionRef}>
-        <div className="container py-20 bg-[url('/house-3.svg')] bg-no-repeat bg-left-bottom bg-[length:100%_50%] lg:bg-[length:60%_100%]">
+      <div className="scene py-10">
+        <div className="container py-20 bg-[url('/house-1.svg')] bg-no-repeat bg-right-bottom bg-[length:100%_50%] lg:bg-[length:90%_100%]">
           <h1 className="text-4xl text-[#FFC045] ">Info</h1>
 
-          <div className="con flex flex-col gap-14 items-end mt-10">
+          <div className="con flex flex-col gap-14  mt-10">
             <div className="con w-full lg:w-2/4 flex gap-2 md:gap-4">
               <h1 className="text text-[#FFC045] text-xl md:text-xl lg:text-4xl">
                 01.

@@ -46,25 +46,25 @@ function About() {
             </h1>
           </div>
           <div className="con w-full mt-6 lg:mt-10 flex justify-start">
-            <h3 className="split w-5/6 md:w-3/4 text-base xs:text-lg md:text-2xl lg:text-4xl xl:text-5xl  mt-2 font-normal text-justify ">
+            <h3 className="split w-5/6 md:w-3/4 text-base xs:text-lg md:text-2xl lg:text-3xl xl:text-4xl mt-2 font-normal text-justify ">
               "Bunyod House" qurilish firmasi Xorazm viloyatida 2019-yilda
               tashkil topgan.
             </h3>
           </div>
           <div className="con w-full mt-6 lg:mt-10 flex justify-end md:justify-center">
-            <h3 className="split w-[84%] xs:w-5/6 md:w-3/4 text-base xs:text-lg md:text-2xl lg:text-4xl xl:text-5xl mt-2 font-normal text-end md:text-justify">
+            <h3 className="split w-[84%] xs:w-5/6 md:w-3/4 text-base xs:text-lg md:text-2xl lg:text-3xl xl:text-4xl mt-2 font-normal text-end md:text-justify">
               Faoliyatimizning birinchi kunlaridan boshlab biz mijozlarimizga
               yuqori sifatli uylarni taqdim qilib kelmoqdamiz.
             </h3>
           </div>
           <div className="con w-full mt-6 lg:mt-10 flex justify-start md:justify-evenly">
-            <h3 className="split w-3/4 xs:w-5/6 md:w-[54%] text-base xs:text-lg md:text-2xl lg:text-4xl xl:text-5xl mt-2 font-normal text-justify">
+            <h3 className="split w-3/4 xs:w-5/6 md:w-[54%] text-base xs:text-lg md:text-2xl lg:text-3xl xl:text-4xl mt-2 font-normal text-justify">
               Bizning uylar o'zining yuqori did va sifat bilan qurilganligi
               sababli boshqalardan ajralib turadi.
             </h3>
           </div>
           <div className="con w-full mt-6 lg:mt-10 flex justify-end">
-            <h3 className="split w-[84%] xs:w-4/5 md:w-[62%] text-base xs:text-lg md:text-2xl lg:text-4xl xl:text-5xl mt-2 font-normal text-end md:text-justify">
+            <h3 className="split w-[84%] xs:w-4/5 md:w-[62%] text-base xs:text-lg md:text-2xl lg:text-3xl xl:text-4xl mt-2 font-normal text-end md:text-justify">
               Endilikda siz ham uy sotib olishga buyurtma berishingiz mumkin.
               Yuqori sifat va arzon narxlar faqat bizda!
             </h3>
