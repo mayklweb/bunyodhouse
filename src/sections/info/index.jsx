@@ -39,13 +39,13 @@ function Info() {
             duration: 1,
             ease: "power2.out",
           },
-          i * 1 // each line starts later in the timeline
+        
         );
       });
     }, sectionRef);
 
     return () => ctx.revert();
-  }, [sectionRef]);
+  }, []);
 
   return (
     <section className="" ref={sectionRef}>
