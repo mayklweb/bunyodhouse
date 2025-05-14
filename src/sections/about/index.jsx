@@ -23,12 +23,12 @@ function About() {
               start: "top 60%",
               end: "center top",
               scrub: 3,
-              toggleActions: "none none none none", // <-- This is the issue
+              toggleActions: "none none none none", 
             },
             duration: 5,
             yPercent: 100,
             opacity: 0,
-            stagger: 1,
+            stagger: 1, 
             ease: "power4",
           });
         },
