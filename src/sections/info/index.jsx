@@ -58,8 +58,8 @@ function Info() {
               className="info-line w-3/5 flex gap-4"
               ref={(el) => (linesRef.current[0] = el)}
             >
-              <h1 className="text-[#FFC045] text-xl lg:text-3xl">01.</h1>
-              <h1 className="text-[#030303] text-2xl lg:text-4xl">
+              <h1 className="text-[#FFC045] text-lg md:text-xl lg:text-3xl">01.</h1>
+              <h1 className="text-[#030303] text-xl md:text-2xl lg:text-4xl">
                 "Bunyod House" uylari o'zining zamonaviy dizayni bilan ajralib
                 turadi.
               </h1>
@@ -69,8 +69,8 @@ function Info() {
               className="info-line w-3/5 flex gap-4 "
               ref={(el) => (linesRef.current[1] = el)}
             >
-              <h1 className="text-[#FFC045] text-xl lg:text-3xl">02.</h1>
-              <h1 className="text-[#030303] text-2xl lg:text-4xl">
+              <h1 className="text-[#FFC045] text-lg md:text-xl lg:text-3xl">02.</h1>
+              <h1 className="text-[#030303] text-xl md:text-2xl lg:text-4xl">
                 Biz mijozlarimiz uchun eng qulay narxlarni taqdim etamiz.
               </h1>
             </div>
@@ -79,8 +79,8 @@ function Info() {
               className="info-line w-3/5 flex gap-4 "
               ref={(el) => (linesRef.current[2] = el)}
             >
-              <h1 className="text-[#FFC045] text-xl lg:text-3xl">03.</h1>
-              <h1 className="text-[#030303] text-2xl lg:text-4xl">
+              <h1 className="text-[#FFC045] text-lg md:text-xl lg:text-3xl">03.</h1>
+              <h1 className="text-[#030303] text-xl md:text-2xl lg:text-4xl">
                 Qurilishda yuqori sifatli materiallar ishlatiladi.
               </h1>
             </div>
