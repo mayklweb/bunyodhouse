@@ -39,7 +39,7 @@ function Contact() {
           {/* <div className="w-full h-full  shadow-[inset_0px_0px_20px_20px_#ffffff] bg-no-repeat bg-cover bg-center absolute  align-bottom"></div> */}
         </div>
         <div className="container">
-          <div className="w-full">
+          <div className="w-full pb-10">
             <form className="flex flex-col gap-6">
               <div className="flex flex-col gap-2">
                 <label className="text-2xl text-[#FFC045]" htmlFor="name">
