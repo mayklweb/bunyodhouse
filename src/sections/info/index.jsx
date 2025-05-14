@@ -40,7 +40,7 @@ function Info() {
   return (
     <section>
       <div className="scene py-10">
-        <div className="container py-20 bg-[url('/house-1.svg')] bg-no-repeat bg-right-bottom bg-[length:100%_50%] lg:bg-[length:90%_100%]">
+        <div className="container py-20 bg-[url('/house-1.svg')] bg-no-repeat bg-right-bottom bg-[length:100%_50%] lg:bg-[length:50%_100%]">
           <h1 className="text-4xl text-[#FFC045] ">Info</h1>
 
           <div className="con flex flex-col gap-14  mt-10">

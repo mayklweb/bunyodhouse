@@ -82,8 +82,8 @@ function Project() {
             <div
               key={i}
               className={`card ${
-                i > 4 && "hidden"
-              } w-full p-2 md:p-4 border border-[#e8a900] flex flex-col gap-2`}
+                i > 3 && "hidden"
+              } w-full p-2 md:p-4 border border-[#e8a900] flex flex-col gap-2 shadow-md`}
             >
               <div className="">
                 <img className="" src={item.image} alt="" />

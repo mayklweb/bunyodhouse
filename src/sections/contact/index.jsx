@@ -40,8 +40,33 @@ function Contact() {
         </div>
         <div className="container">
           <div className="w-full">
+            <form className="flex flex-col gap-6">
+              <div className="flex flex-col gap-2">
+                <label className="text-2xl text-[#FFC045]" htmlFor="name">
+                  Ismingiz
+                </label>
+                <input
+                  className="p-4 text-lg bg-white border-[#FFC045] border-[1px] border-solid outline-none"
+                  type="text"
+                  placeholder="Ismingiz..."
+                />
+              </div>
+              <div className="flex flex-col gap-2">
+                <label className="text-2xl text-[#FFC045]" htmlFor="name">
+                  Telefon
+                </label>
+                <input
+                  className="p-4 text-lg bg-white border-[#FFC045] border-[1px] border-solid outline-none"
+                  type="text"
+                  placeholder="Telefon..."
+                />
+              </div>
 
-            
+              <button className="bg-[#FFC045] text-white text-xl mt-6 p-4">
+                YUBORISH
+              </button>
+            </form>
+
             {/* <div className="w-full">
               <h1 className="text-2xl lg:text-4xl">Aloqa</h1>
               <div className="mt-4 lg:mt-10 flex flex-col gap-4">
