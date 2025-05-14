@@ -21,7 +21,7 @@ function Info() {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: sectionRef.current,
-          start: "top 40px",
+          start: "top top",
           scrub: true,
           pin: true,
         },
