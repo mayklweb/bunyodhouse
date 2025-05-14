@@ -22,7 +22,6 @@ function Info() {
         scrollTrigger: {
           trigger: sectionRef.current,
           start: "top 40px",
-          end: "+=1600", // enough scroll distance
           scrub: true,
           pin: true,
         },
