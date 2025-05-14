@@ -9,27 +9,32 @@ function Info() {
   const sectionRef = useRef(null);
 
   useEffect(() => {
+    // SplitText animation
     document.fonts.ready.then(() => {
-      // Split text
+      gsap.set(".text", { opacity: 1 });
+
       const split = new SplitText(".text", {
         type: "words,lines",
         linesClass: "line",
-      });
+        autoSplit: true,
+        mask: "lines",
 
-      // Animate each line
-      gsap.from(split.lines, {
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top 70%",
-          end: "bottom center",
-          scrub: true,
-          toggleActions: "play none none none",
+        onSplit: (self) => {
+          return gsap.from(self.lines, {
+            scrollTrigger: {
+              trigger: self.lines[0],
+              start: "top 60%",
+              end: "center top",
+              scrub: 3,
+              toggleActions: "none none none none", 
+            },
+            duration: 5,
+            yPercent: 100,
+            opacity: 0,
+            stagger: 1, 
+            ease: "power4",
+          });
         },
-        yPercent: 100,
-        opacity: 0,
-        duration: 1,
-        stagger: 0.2,
-        ease: "power4.out",
       });
     });
   }, []);
