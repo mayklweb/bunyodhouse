@@ -23,6 +23,7 @@ function Info() {
           start: "top 70%",
           end: "bottom center",
           scrub: true,
+          toggleActions: "play none none none",
         },
         yPercent: 100,
         opacity: 0,
