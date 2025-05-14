@@ -1,98 +1,72 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import SplitText from "gsap/SplitText";
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger, SplitText);
 
 function Info() {
   const sectionRef = useRef(null);
-  const linesRef = useRef([]);
-
-  console.log(sectionRef);
-  console.log(linesRef);
-  
-
-  if (!linesRef.current.every(Boolean)) return;
 
   useEffect(() => {
-    const ctx = gsap.context(() => {
-      // Set all lines to be hidden initially
-      gsap.set(linesRef.current, {
-        autoAlpha: 0,
-        y: 40,
+    document.fonts.ready.then(() => {
+      // Split text
+      const split = new SplitText(".split", {
+        type: "words,lines",
+        linesClass: "line",
       });
 
-      const tl = gsap.timeline({
+      // Animate each line
+      gsap.from(split.lines, {
         scrollTrigger: {
           trigger: sectionRef.current,
-          start: "top 40px",
-          end: "+=2000 bottom",
-          scrub: true,
-          pin: true,
-          // pinSpacing: false,
+          start: "top 70%",
+          end: "center top",
+          scrub: 1,
         },
+        yPercent: 110,
+        opacity: 0,
+        duration: 1,
+        stagger: 0.2,
+        ease: "power4.out",
       });
-
-      // Animate each line one by one based on timeline
-      linesRef.current.forEach((line, i) => {
-        tl.to(
-          line,
-          {
-            autoAlpha: 2,
-            y: 0,
-            duration: 1,
-            ease: "power2.out",
-          },
-          i * 1 // each line starts later in the timeline
-        );
-      });
-    }, sectionRef);
-
-    return () => ctx.revert();
+    });
   }, []);
 
   return (
-    <section className="">
-      <div className="scene pt-10"  ref={sectionRef}>
-        <div className="container py-20">
-          <h1 className="text-4xl text-[#FFC045] mb-10">Info</h1>
+    <section>
+      <div className="scene py-10 " ref={sectionRef}>
+        <div className="container py-20 bg-[url('/house-3.svg')] bg-no-repeat bg-left-bottom bg-[length:60%_100%]">
+          <h1 className="text-4xl text-[#FFC045] ">Info</h1>
 
-          <div className="flex flex-col gap-14 items-end">
-            <div
-              className="info-line w-3/5 flex gap-4"
-              ref={(el) => (linesRef.current[0] = el)}
-            >
-              <h1 className="text-[#FFC045] text-lg md:text-xl lg:text-3xl">01.</h1>
-              <h1 className="text-[#030303] text-xl md:text-2xl lg:text-4xl">
+          <div className="con flex flex-col gap-14 items-end ">
+            <div className="con w-2/4 flex gap-4">
+              <h1 className="split text-[#FFC045] text-lg md:text-xl lg:text-4xl">
+                01.
+              </h1>
+              <h1 className="split text-[#030303] text-xl md:text-2xl lg:text-5xl">
                 "Bunyod House" uylari o'zining zamonaviy dizayni bilan ajralib
                 turadi.
               </h1>
             </div>
 
-            <div
-              className="info-line w-3/5 flex gap-4 "
-              ref={(el) => (linesRef.current[1] = el)}
-            >
-              <h1 className="text-[#FFC045] text-lg md:text-xl lg:text-3xl">02.</h1>
-              <h1 className="text-[#030303] text-xl md:text-2xl lg:text-4xl">
+            <div className="con w-2/4 flex gap-4">
+              <h1 className="split text-[#FFC045] text-lg md:text-xl lg:text-4xl">
+                02.
+              </h1>
+              <h1 className="split text-[#030303] text-xl md:text-2xl lg:text-5xl">
                 Biz mijozlarimiz uchun eng qulay narxlarni taqdim etamiz.
               </h1>
             </div>
 
-            <div
-              className="info-line w-3/5 flex gap-4 "
-              ref={(el) => (linesRef.current[2] = el)}
-            >
-              <h1 className="text-[#FFC045] text-lg md:text-xl lg:text-3xl">03.</h1>
-              <h1 className="text-[#030303] text-xl md:text-2xl lg:text-4xl">
+            <div className="con w-2/4 flex gap-4">
+              <h1 className="split text-[#FFC045] text-lg md:text-xl lg:text-4xl">
+                03.
+              </h1>
+              <h1 className="split text-[#030303] text-xl md:text-2xl lg:text-5xl">
                 Qurilishda yuqori sifatli materiallar ishlatiladi.
               </h1>
             </div>
-          </div>
-
-          {/* Background Image */}
-          <div className="w-full absolute bottom-0 right-0 z-[-1] hidden items-start lg:flex ">
-            <img className="w-[40%]" src="/house-3.svg" alt="" />
           </div>
         </div>
       </div>
