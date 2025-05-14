@@ -23,8 +23,8 @@ function Info() {
           trigger: sectionRef.current,
           start: "top top",
           end: "bottom top",
-          scrub: true,
-          pin: true,
+          // scrub: true,
+          // pin: true,
         },
       });
 
