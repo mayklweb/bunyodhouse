@@ -51,9 +51,9 @@ function Info() {
         <div className="container py-20">
           <h1 className="text-4xl text-[#FFC045] mb-10">Info</h1>
 
-          <div className="flex flex-col gap-10">
+          <div className="flex flex-col gap-14 items-end">
             <div
-              className="info-line w-3/4 flex gap-4 ml-[20px] lg:ml-[40px]"
+              className="info-line w-2/4 flex gap-4"
               ref={(el) => (linesRef.current[0] = el)}
             >
               <h1 className="text-[#FFC045] text-2xl lg:text-3xl">01.</h1>
@@ -64,7 +64,7 @@ function Info() {
             </div>
 
             <div
-              className="info-line w-3/4 flex gap-4 ml-[40px] lg:ml-[80px]"
+              className="info-line w-2/4 flex gap-4 "
               ref={(el) => (linesRef.current[1] = el)}
             >
               <h1 className="text-[#FFC045] text-2xl lg:text-3xl">02.</h1>
@@ -74,7 +74,7 @@ function Info() {
             </div>
 
             <div
-              className="info-line w-3/4 flex gap-4 ml-[80px] lg:ml-[120px]"
+              className="info-line w-2/4 flex gap-4 "
               ref={(el) => (linesRef.current[2] = el)}
             >
               <h1 className="text-[#FFC045] text-2xl lg:text-3xl">03.</h1>
@@ -85,9 +85,9 @@ function Info() {
           </div>
 
           {/* Background Image */}
-          {/* <div className="w-full absolute bottom-0 right-0 z-[-1] flex justify-end items-end">
-            <img className="w-[40%]" src="/info.webp" alt="" />
-          </div> */}
+          <div className="w-full absolute bottom-0 right-0 z-[-1] flex items-start">
+            <img className="w-[40%]" src="/house-3.svg" alt="" />
+          </div>
         </div>
       </div>
     </section>
