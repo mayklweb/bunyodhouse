@@ -8,6 +8,10 @@ function Info() {
   const sectionRef = useRef(null);
   const linesRef = useRef([]);
 
+  console.log(sectionRef);
+  console.log(linesRef);
+  
+
   if (!linesRef.current.every(Boolean)) return;
 
   useEffect(() => {
@@ -48,8 +52,8 @@ function Info() {
   }, []);
 
   return (
-    <section className="" ref={sectionRef}>
-      <div className="scene pt-10">
+    <section className="">
+      <div className="scene pt-10"  ref={sectionRef}>
         <div className="container py-20">
           <h1 className="text-4xl text-[#FFC045] mb-10">Info</h1>
 
