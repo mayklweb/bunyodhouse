@@ -22,7 +22,7 @@ function Info() {
         scrollTrigger: {
           trigger: sectionRef.current,
           start: "top 40px",
-          end: "+=2000",
+          end: "+=725",
           scrub: true,
           pin: true,
           // pinSpacing: false,
