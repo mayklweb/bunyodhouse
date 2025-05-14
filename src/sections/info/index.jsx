@@ -48,9 +48,9 @@ function Info() {
   }, [sectionRef]);
 
   return (
-    <section className="">
+    <section className="" ref={sectionRef}>
       <div className="scene pt-10" >
-        <div className="container py-20" ref={sectionRef}>
+        <div className="container py-20" >
           <h1 className="text-4xl text-[#FFC045] mb-10">Info</h1>
 
           <div className="flex flex-col gap-14 items-end">
