@@ -22,9 +22,10 @@ function Info() {
         scrollTrigger: {
           trigger: sectionRef.current,
           start: "top top",
-          end: "bottom top",
-          // scrub: true,
+          end: "+=2000",
+          scrub: true,
           pin: true,
+          // pinSpacing: false,
         },
       });
 
@@ -48,8 +49,8 @@ function Info() {
 
   return (
     <section className="">
-      <div className="scene pt-10" ref={sectionRef}>
-        <div className="container py-20">
+      <div className="scene pt-10" >
+        <div className="container py-20" ref={sectionRef}>
           <h1 className="text-4xl text-[#FFC045] mb-10">Info</h1>
 
           <div className="flex flex-col gap-14 items-end">
