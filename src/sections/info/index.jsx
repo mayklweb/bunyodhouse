@@ -49,8 +49,8 @@ function Info() {
 
   return (
     <section className="" ref={sectionRef}>
-      <div className="scene pt-10" >
-        <div className="container py-20" >
+      <div className="scene pt-10">
+        <div className="container py-20">
           <h1 className="text-4xl text-[#FFC045] mb-10">Info</h1>
 
           <div className="flex flex-col gap-14 items-end">
@@ -87,7 +87,7 @@ function Info() {
           </div>
 
           {/* Background Image */}
-          <div className="w-full absolute bottom-0 right-0 z-[-1] flex items-start">
+          <div className="w-full absolute bottom-0 right-0 z-[-1] hidden items-start lg:flex ">
             <img className="w-[40%]" src="/house-3.svg" alt="" />
           </div>
         </div>
