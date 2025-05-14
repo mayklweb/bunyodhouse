@@ -22,7 +22,7 @@ function Info() {
           trigger: sectionRef.current,
           start: "top 70%",
           end: "bottom center",
-          scrub: 1,
+          scrub: true,
         },
         yPercent: 100,
         opacity: 0,
@@ -35,7 +35,7 @@ function Info() {
 
   return (
     <section>
-      <div className="scene py-10 " ref={sectionRef}>
+      <div className="scene py-10" ref={sectionRef}>
         <div className="container py-20 bg-[url('/house-3.svg')] bg-no-repeat bg-left-bottom bg-[length:100%_50%] lg:bg-[length:60%_100%]">
           <h1 className="text-4xl text-[#FFC045] ">Info</h1>
 
@@ -50,7 +50,7 @@ function Info() {
               </h1>
             </div>
 
-            <div className="con w-full lg:w-2/4 flex gap-4">
+            <div className="con w-full lg:w-2/4 flex gap-2 md:gap-4">
               <h1 className="split text-[#FFC045] text-xl md:text-xl lg:text-4xl">
                 02.
               </h1>
@@ -59,11 +59,11 @@ function Info() {
               </h1>
             </div>
 
-            <div className="con w-11/12 lg:w-2/4 flex gap-4">
-              <h1 className="split text-[#FFC045] text-lg md:text-xl lg:text-4xl">
+            <div className="con w-full lg:w-2/4 flex gap-2 md:gap-4">
+              <h1 className="split text-[#FFC045] text-xl md:text-xl lg:text-4xl">
                 03.
               </h1>
-              <h1 className="split text-[#030303] text-xl md:text-2xl lg:text-5xl">
+              <h1 className="split text-[#030303] text-2xl md:text-2xl lg:text-5xl">
                 Qurilishda yuqori sifatli materiallar ishlatiladi.
               </h1>
             </div>

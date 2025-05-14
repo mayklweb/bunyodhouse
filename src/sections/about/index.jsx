@@ -5,39 +5,15 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
 function About() {
-  const projectImg = useRef(null);
-
   useEffect(() => {
-    // Scroll-triggered animation for image
-    gsap.set(projectImg.current, {
-      clipPath: "polygon(0 0%, 100% 0%, 100% 0%, 0% 0%)",
-    });
-
-    gsap
-      .timeline({
-        scrollTrigger: {
-          trigger: projectImg.current,
-          start: "top center",
-          end: "center top",
-          scrub: 1,
-          toggleActions: "none none none none",
-        },
-      })
-      .to(projectImg.current, {
-        clipPath: "polygon(0 0%, 100% 0%, 100% 100%, 0% 100%)",
-        ease: "power4.out",
-        duration: 2.4,
-        toggleActions: "none none none none",
-      });
-
     // SplitText animation
     document.fonts.ready.then(() => {
       gsap.set(".split", { opacity: 1 });
 
-      const split = SplitText.create(".split", {
+      const split = new SplitText(".split", {
         type: "words,lines",
         linesClass: "line",
-        // autoSplit: true,
+        autoSplit: true,
         mask: "lines",
 
         onSplit: (self) => {
