@@ -14,6 +14,7 @@ function Header() {
 
 
   useEffect(() => {
+    const isMobile = window.innerWidth < 768; // adjust for your breakpoint
     // Initial states
     gsap.set(header.current, {
       height: "100vh",
@@ -23,9 +24,14 @@ function Header() {
       scale: 2,
     });
 
-    gsap.set([navLeft.current, navRight.current], {
+    gsap.set(navRight.current, {
       opacity: 0,
-      y: -20,
+      y: 20,
+    });
+
+    gsap.set(navLeft.current, {
+      opacity: 0,
+      y: 20,
     });
 
     const tl = gsap.timeline({
@@ -34,7 +40,8 @@ function Header() {
     });
 
     tl.to(header.current, {
-      height: "100px",
+      height: isMobile ? "70px" : "100px", 
+
       duration: 1,
     });
 
@@ -44,18 +51,26 @@ function Header() {
         scale: 1,
         duration: 1,
       },
-      "<"
+      "start"
     );
 
     tl.to(
-      [navLeft.current, navRight.current],
+      navRight.current,
       {
         opacity: 1,
         y: 0,
-        duration: 1,
-        stagger: 1,
+        duration: 1.8,
       },
-      "<"
+      "start"
+    );
+    tl.to(
+      navLeft.current,
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1.8,
+      },
+      "start"
     );
 
     // Scroll-triggered hide/show
@@ -113,7 +128,7 @@ function Header() {
                 />
               </Link>
             </div>
-            <button  className="lg:hidden">
+            <button className="lg:hidden">
               <Phone size={24} strokeWidth={1.5} />
             </button>
             <div ref={navRight} className="hidden lg:flex gap-4">
