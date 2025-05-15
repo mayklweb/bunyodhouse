@@ -88,8 +88,7 @@ function Header() {
 
   return (
     <header
-      className="header "
-
+      className="header"
     >
       <div ref={header} className="header-row fixed top-0 left-0 h-screen bg-[#fff] z-50 overflow-hidden w-full py-4 md:py-6 lg:py-8 flex justify-between items-center transition-all ease duration-500">
         <div className="container">
