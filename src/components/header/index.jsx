@@ -1,10 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import gsap from "gsap";
-import { Flip, ScrollTrigger } from "gsap/all";
+import { ScrollTrigger } from "gsap/all";
 import { AlignJustify, Phone } from "lucide-react";
 
-gsap.registerPlugin(Flip, ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger);
 
 function Header() {
   const header = useRef([]);
@@ -21,6 +21,7 @@ function Header() {
     // Initial states
     gsap.set(header.current, {
       height: "100vh",
+      willChange: "height",
     });
 
     gsap.set(logo.current, {
@@ -43,51 +44,51 @@ function Header() {
     });
 
     const tl = gsap.timeline({
-      defaults: { ease: 'power2.in' },
-      delay: 0.6,
+      defaults: { ease: 'power2.out' }, // smoother ease
     });
-
+    
     tl.to(header.current, {
       height: isMobile ? "70px" : "100px",
-      duration: 0.6,
-    }, "end");
-
+      duration: 2.4,
+    }, "start");
+    
     tl.to(
       logo.current,
       {
         scale: 1,
-        duration: 1,
+        duration: 2.4,
       },
-      "end"
+      "start"
     );
-
+    
     tl.to(
-      [call, menu],
+      [call.current, menu.current],
       {
         opacity: 1,
         y: 0,
-        duration: 0.6,
+        duration: 2,
+        stagger: 2.4,
       },
-      "end"
+      "start"
     );
-
+    
     tl.to(
       navRight.current,
       {
         opacity: 1,
         y: 0,
-        duration: 0.6,
+        duration: 2.4,
       },
-      "end"
+      "start"
     );
     tl.to(
       navLeft.current,
       {
         opacity: 1,
         y: 0,
-        duration: 0.6,
+        duration: 2.4,
       },
-      "end"
+      "start"
     );
 
     // Scroll-triggered hide/show
@@ -122,11 +123,15 @@ function Header() {
     <header
       className="header"
     >
-      <div ref={header} className="header-row fixed top-0 left-0 h-screen bg-[#fff] z-50 overflow-hidden w-full py-4 md:py-6 lg:py-8 flex justify-between items-center transition-all ease duration-500">
+      <div ref={header} className="header-row fixed top-0 left-0 bg-[#fff] z-50 overflow-hidden w-full py-4 md:py-6 lg:py-8 flex justify-between items-center transition-all ease duration-500 will-change-transform">
+
+        {/* <div ref={header} className="header-row fixed top-0 left-0 h-screen bg-[#fff] z-50 overflow-hidden w-full py-4 md:py-6 lg:py-8 flex justify-between items-center transition-all ease duration-500"> */}
         <div className="container">
           <div className=" flex justify-between items-center relative">
             <button className="lg:hidden">
-              <AlignJustify ref={menu} />
+              <span ref={menu}>
+                <AlignJustify />
+              </span>
             </button>
             <div ref={navLeft} className="hidden lg:flex gap-4">
               <Link className="text-[#FFC045]" to={"main"}>
@@ -145,8 +150,10 @@ function Header() {
                 />
               </Link>
             </div>
-            <button ref={call} className="lg:hidden">
-              <Phone size={24} strokeWidth={1.5} />
+            <button className="lg:hidden">
+              <span ref={call}>
+                <Phone size={24} strokeWidth={1.5} />
+              </span>
             </button>
             <div ref={navRight} className="hidden lg:flex gap-4">
               <Link to={"main"}>BIZNING LOYIHALAR</Link>
