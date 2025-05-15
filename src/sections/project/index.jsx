@@ -83,7 +83,7 @@ function Project() {
               key={i}
               className={`card ${
                 i > 3 && "hidden"
-              } w-full p-2 md:p-4 border border-[#e8a900] flex flex-col gap-2 shadow-md`}
+              } w-full p-2 md:p-4 border border-[#FFC045] flex flex-col gap-2 shadow-md`}
             >
               <div className="">
                 <img className="" src={item.image} alt="" />
@@ -91,25 +91,25 @@ function Project() {
               <div>
                 <div className="flex gap-2 text-sm md:text-base">
                   <p className="text-[#1e1e1e]">Maydon</p>
-                  <span className="mb-[2%] md:mb-[1%] flex flex-auto border-b border-[#e8a900] border-dashed"></span>
+                  <span className="mb-[2%] md:mb-[1%] flex flex-auto border-b border-[#FFC045] border-dashed"></span>
                   <p>
                     110.34 m<sup>2</sup>
                   </p>
                 </div>
                 <div className="flex gap-2 text-sm md:text-base">
                   <p className="text-[#1e1e1e]">Xonalar</p>
-                  <span className="mb-[2%] md:mb-[1%] flex flex-auto border-b border-[#e8a900] border-dashed"></span>
+                  <span className="mb-[2%] md:mb-[1%] flex flex-auto border-b border-[#FFC045] border-dashed"></span>
                   <p>5</p>
                 </div>
 
                 <div className="flex gap-2 text-sm md:text-base">
                   <p className="text-[#1e1e1e]">Qavat</p>
-                  <span className="mb-[2%] md:mb-[1%] flex flex-auto border-b border-[#e8a900] border-dashed"></span>
+                  <span className="mb-[2%] md:mb-[1%] flex flex-auto border-b border-[#FFC045] border-dashed"></span>
                   <p>2</p>
                 </div>
                 <div className="flex gap-2 text-sm md:text-base">
                   <p className="text-[#1e1e1e]">Location</p>
-                  <span className="mb-[2%] md:mb-[1%] flex flex-auto border-b border-[#e8a900] border-dashed"></span>
+                  <span className="mb-[2%] md:mb-[1%] flex flex-auto border-b border-[#FFC045] border-dashed"></span>
                   <p>{item.location}</p>
                 </div>
               </div>

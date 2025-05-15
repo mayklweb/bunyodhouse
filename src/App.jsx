@@ -4,14 +4,18 @@ import gsap from "gsap";
 import { Footer, Header } from "./components";
 import { Comments, Contact, Project, About } from "./sections";
 import Info from "./sections/info";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
 
 function App() {
-  const loading = useRef([]);
+
 
   return (
     <>
       <Header />
-      <main className="">
+      <main>
         <Banner />
         <About />
         <Project />
@@ -23,5 +27,6 @@ function App() {
     </>
   );
 }
+
 
 export default App;

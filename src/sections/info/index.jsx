@@ -23,10 +23,10 @@ function Info() {
               trigger: self.lines[0],
               start: "top 80%",
               end: "center center",
-              scrub: 3,
-              toggleActions: "none none none none",
+              scrub: 5,
+              toggleActions: "play none none none",
             },
-            duration: 5,
+            duration: 10,
             yPercent: 100,
             opacity: 0,
             stagger: 1,
@@ -40,21 +40,21 @@ function Info() {
   return (
     <section>
       <div className="scene py-10">
-        <div className="container py-20 bg-[url('/house-1.svg')] bg-no-repeat bg-right-bottom bg-[length:100%_50%] lg:bg-[length:50%_100%]">
+        <div className="container py-20 bg-[url('/house-1.svg')] bg-no-repeat bg-right-bottom bg-[length:100%_100%] lg:bg-[length:50%_100%]">
           <h1 className="text-4xl text-[#FFC045] ">Info</h1>
 
           <div className="con flex flex-col gap-14  mt-10">
-            <div className="con w-full lg:w-2/4 flex gap-2 md:gap-4">
+            <div className="con w-full lg:w-3/5 flex gap-2 md:gap-4">
               <h1 className="text text-[#FFC045] text-xl md:text-xl lg:text-4xl">
                 01.
               </h1>
-              <h1 className="text text-[#030303] text-2xl md:text-2xl lg:text-5xl text-justify">
+              <h1 className="text text-[#030303] text-2xl md:text-2xl lg:text-5xl">
                 "Bunyod House" uylari o'zining zamonaviy dizayni bilan ajralib
                 turadi.
               </h1>
             </div>
 
-            <div className="con w-full lg:w-2/4 flex gap-2 md:gap-4">
+            <div className="con w-full lg:w-3/5 flex gap-2 md:gap-4">
               <h1 className="text text-[#FFC045] text-xl md:text-xl lg:text-4xl">
                 02.
               </h1>
@@ -63,7 +63,7 @@ function Info() {
               </h1>
             </div>
 
-            <div className="con w-full lg:w-2/4 flex gap-2 md:gap-4">
+            <div className="con w-full lg:w-3/5 flex gap-2 md:gap-4">
               <h1 className="text text-[#FFC045] text-xl md:text-xl lg:text-4xl">
                 03.
               </h1>
