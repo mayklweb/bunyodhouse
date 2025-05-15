@@ -36,13 +36,12 @@ function Header() {
 
     const tl = gsap.timeline({
       defaults: { ease: "power2.out" },
-      delay: 2,
+      delay: 1,
     });
 
     tl.to(header.current, {
       height: isMobile ? "70px" : "100px", 
-
-      duration: 1,
+      duration: 2,
     });
 
     tl.to(
@@ -108,7 +107,7 @@ function Header() {
       <div ref={header} className="header-row fixed top-0 left-0 h-screen bg-[#fff] z-50 overflow-hidden w-full py-4 md:py-6 lg:py-8 flex justify-between items-center transition-all ease duration-500">
         <div className="container">
           <div className=" flex justify-between items-center relative">
-            <button className="lg:hidden">
+            <button ref={navLeft} className="lg:hidden">
               <AlignJustify />
             </button>
             <div ref={navLeft} className="hidden lg:flex gap-4">
@@ -128,7 +127,7 @@ function Header() {
                 />
               </Link>
             </div>
-            <button className="lg:hidden">
+            <button ref={navRight} className="lg:hidden">
               <Phone size={24} strokeWidth={1.5} />
             </button>
             <div ref={navRight} className="hidden lg:flex gap-4">
