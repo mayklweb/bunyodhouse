@@ -50,7 +50,7 @@ function Header() {
     tl.to(header.current, {
       height: isMobile ? "70px" : "100px",
       duration: 2.4,
-    }, "start");
+    }, "align");
     
     tl.to(
       logo.current,
