@@ -11,6 +11,9 @@ function Header() {
   const logo = useRef(null);
   const navLeft = useRef(null);
   const navRight = useRef(null);
+  const menu = useRef(null);
+  const call = useRef(null);
+
 
 
   useEffect(() => {
@@ -21,7 +24,7 @@ function Header() {
     });
 
     gsap.set(logo.current, {
-      scale: 2,
+      scale: 3,
     });
 
     gsap.set(navRight.current, {
@@ -34,15 +37,20 @@ function Header() {
       y: 20,
     });
 
+    gsap.set([menu, call], {
+      opacity: 0,
+      y: 20,
+    });
+
     const tl = gsap.timeline({
-      defaults: { ease: "power2.out" },
-      delay: 1,
+      defaults: { ease: 'power2.in' },
+      delay: 0.6,
     });
 
     tl.to(header.current, {
-      height: isMobile ? "70px" : "100px", 
-      duration: 2,
-    });
+      height: isMobile ? "70px" : "100px",
+      duration: 0.6,
+    }, "end");
 
     tl.to(
       logo.current,
@@ -50,7 +58,17 @@ function Header() {
         scale: 1,
         duration: 1,
       },
-      "start"
+      "end"
+    );
+
+    tl.to(
+      [call, menu],
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.6,
+      },
+      "end"
     );
 
     tl.to(
@@ -58,26 +76,26 @@ function Header() {
       {
         opacity: 1,
         y: 0,
-        duration: 1.8,
+        duration: 0.6,
       },
-      "start"
+      "end"
     );
     tl.to(
       navLeft.current,
       {
         opacity: 1,
         y: 0,
-        duration: 1.8,
+        duration: 0.6,
       },
-      "start"
+      "end"
     );
 
     // Scroll-triggered hide/show
     const scrollAnim = gsap
       .to(header.current, {
         yPercent: -100,
-        duration: 0.3,
-        ease: "power2.out",
+        duration: 0.5,
+        ease: "power2.inOut",
         paused: true,
       })
       .progress(0);
@@ -107,8 +125,8 @@ function Header() {
       <div ref={header} className="header-row fixed top-0 left-0 h-screen bg-[#fff] z-50 overflow-hidden w-full py-4 md:py-6 lg:py-8 flex justify-between items-center transition-all ease duration-500">
         <div className="container">
           <div className=" flex justify-between items-center relative">
-            <button ref={navLeft} className="lg:hidden">
-              <AlignJustify />
+            <button className="lg:hidden">
+              <AlignJustify ref={menu} />
             </button>
             <div ref={navLeft} className="hidden lg:flex gap-4">
               <Link className="text-[#FFC045]" to={"main"}>
@@ -127,7 +145,7 @@ function Header() {
                 />
               </Link>
             </div>
-            <button ref={navRight} className="lg:hidden">
+            <button ref={call} className="lg:hidden">
               <Phone size={24} strokeWidth={1.5} />
             </button>
             <div ref={navRight} className="hidden lg:flex gap-4">
