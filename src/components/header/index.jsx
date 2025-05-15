@@ -44,7 +44,7 @@ function Header() {
     });
 
     const tl = gsap.timeline({
-      defaults: { ease: 'power2.out' }, // smoother ease
+      defaults: { ease: 'power4' }, // smoother ease
     });
     
     tl.to(header.current, {
