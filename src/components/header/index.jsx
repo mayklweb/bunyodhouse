@@ -1,8 +1,10 @@
-import React, { useEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
+"use client";
+
+import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { AlignJustify, Phone } from "lucide-react";
+import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -14,18 +16,19 @@ function Header() {
   const menu = useRef(null);
   const call = useRef(null);
 
-
-
   useEffect(() => {
-    const isMobile = window.innerWidth < 768; // adjust for your breakpoint
-    // Initial states
+    const isMobile = window.innerWidth < 768;
+
     gsap.set(header.current, {
-      height: "100vh",
+      height: "100%",
       willChange: "height",
+      backgroundColor: "white",
+      backdropFilter: "blur(0px)",
     });
 
     gsap.set(logo.current, {
       scale: 3,
+      willChange: "transform",
     });
 
     gsap.set(navRight.current, {
@@ -38,57 +41,59 @@ function Header() {
       y: 20,
     });
 
-    gsap.set([menu, call], {
+    gsap.set([menu.current, call.current], {
       opacity: 0,
       y: 20,
     });
 
     const tl = gsap.timeline({
-      defaults: { ease: 'power4' }, // smoother ease
+      defaults: { delay: 1, duration: 1, ease: "power3.inOut", stagger: 0.2, smoothOrigin: true, },
     });
-    
+
     tl.to(header.current, {
-      height: isMobile ? "70px" : "100px",
-      duration: 2.4,
-    }, "align");
-    
+      height: isMobile ? "80px" : "120px",
+      duration: 3,
+      backgroundColor: "transparent",
+      backdropFilter: "blur(10px)",
+    }, "end");
+
     tl.to(
       logo.current,
       {
         scale: 1,
-        duration: 2.4,
+        duration: 1.4,
+
       },
-      "start"
+      "1"
     );
-    
+
     tl.to(
       [call.current, menu.current],
       {
         opacity: 1,
         y: 0,
-        duration: 2,
-        stagger: 2.4,
+        duration: 1.4,
       },
-      "start"
+      "1.4"
     );
-    
+
     tl.to(
       navRight.current,
       {
         opacity: 1,
         y: 0,
-        duration: 2.4,
+        duration: 1.4,
       },
-      "start"
+      "1.4"
     );
     tl.to(
       navLeft.current,
       {
         opacity: 1,
         y: 0,
-        duration: 2.4,
+        duration: 1.4,
       },
-      "start"
+      "1.4"
     );
 
     // Scroll-triggered hide/show
@@ -123,9 +128,8 @@ function Header() {
     <header
       className="header"
     >
-      <div ref={header} className="header-row fixed top-0 left-0 bg-[#fff] z-50 overflow-hidden w-full py-4 md:py-6 lg:py-8 flex justify-between items-center transition-all ease duration-500 will-change-transform">
+      <div ref={header} className="header-row fixed top-0 left-0 z-50 overflow-hidden w-full py-4 md:py-6 lg:py-8 flex justify-between items-center  will-change-transform">
 
-        {/* <div ref={header} className="header-row fixed top-0 left-0 h-screen bg-[#fff] z-50 overflow-hidden w-full py-4 md:py-6 lg:py-8 flex justify-between items-center transition-all ease duration-500"> */}
         <div className="container">
           <div className=" flex justify-between items-center relative">
             <button className="lg:hidden">
@@ -134,14 +138,14 @@ function Header() {
               </span>
             </button>
             <div ref={navLeft} className="hidden lg:flex gap-4">
-              <Link className="text-[#FFC045]" to={"main"}>
+              <Link className="text-[#FFC045]" href={"main"}>
                 ASOSIY
               </Link>
-              <Link to={"main"}>BIZNING LOYIHALAR</Link>
-              <Link to={"main"}>BIZ HAQIMIZDA</Link>
+              <Link href={"main"}>BIZNING LOYIHALAR</Link>
+              <Link href={"main"}>BIZ HAQIMIZDA</Link>
             </div>
             <div className="top-2/4 left-2/4 transform-gpu -translate-x-2/4 -translate-y-2/4 absolute">
-              <Link to={"/"}>
+              <Link href={"/"}>
                 <img
                   ref={logo}
                   src="/logo.svg"
@@ -156,8 +160,8 @@ function Header() {
               </span>
             </button>
             <div ref={navRight} className="hidden lg:flex gap-4">
-              <Link to={"main"}>BIZNING LOYIHALAR</Link>
-              <Link to={"main"}>BIZ HAQIMIZDA</Link>
+              <Link href={"main"}>BIZNING LOYIHALAR</Link>
+              <Link href={"main"}>BIZ HAQIMIZDA</Link>
               <p></p>
             </div>
           </div>

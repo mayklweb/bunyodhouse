@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -15,10 +17,10 @@ function Project() {
         opacity: 0,
         duration: 1,
         ease: "power3.out",
-        delay: index * 0.2,
+        delay: index * 0.1,
         scrollTrigger: {
           trigger: card,
-          start: "top 60%",
+          start: "top center",
           toggleActions: "play none none none",
         },
       });
@@ -70,20 +72,45 @@ function Project() {
       year: "2023",
       type: "House",
       room: 4,
+    }, {
+      id: 1,
+      image: "/project.webp",
+      area: "110.34 m2",
+      location: "Urganch",
+      year: "2023",
+      type: "House",
+      room: 4,
     },
+    {
+      id: 1,
+      image: "/project.webp",
+      area: "110.34 m2",
+      location: "Urganch",
+      year: "2023",
+      type: "House",
+      room: 4,
+    },
+    {
+      id: 1,
+      image: "/project.webp",
+      area: "110.34 m2",
+      location: "Urganch",
+      year: "2023",
+      type: "House",
+      room: 4,
+    },
+
   ];
 
   return (
     <div>
       <div className="container">
         <h1 className="text-4xl text-[#FFC045]">Tayor xonadonlar</h1>
-        <div className="grid grid-cols-2 lg:grid-cols-5 gap-3 md:gap-6 py-10">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6 py-10">
           {data.map((item, i) => (
             <div
               key={i}
-              className={`card ${
-                i > 3 && "hidden"
-              } w-full p-2 md:p-4 border border-[#FFC045] flex flex-col gap-2 shadow-md`}
+              className={`card w-full p-2 md:p-4 border border-[#FFC045] flex flex-col gap-2 shadow-md`}
             >
               <div className="">
                 <img className="" src={item.image} alt="" />

@@ -1,14 +1,15 @@
+"use client";
+
 import React from "react";
-import { Link } from "react-router-dom";
 
 function Footer() {
   return (
     <footer className="mt-14">
-      <div className="w-full bg-no-repeat bg-top bg-cover bg-[url('/footer.png')]">
+      <div className="w-full bg-no-repeat bg-top bg-cover bg-[url('/footer.webp')]">
         <div className="container">
-          <div className="grid grid-row-3 lg:grid-cols-3 justify-between pt-[80px] pb-[60px]">
-            <div className="w-3/4 flex flex-col items-center">
-              <div className="w-full">
+          <div className="grid grid-row-3 lg:grid-cols-3 gap-10 justify-between pt-20">
+            <div className="w-full lg:w-[80%] flex flex-col items-center ">
+              <div className="w-[80%]">
                 <img src="/logo-white.svg" alt="" />
               </div>
               {/* <p className="text-white text-justify mt-2">
@@ -18,81 +19,50 @@ function Footer() {
               </p> */}
             </div>
             <div className="flex flex-col gap-4 mt-4">
-              <h1 className="text-white lg:text-4xl">Sayt haritasi</h1>
-              <div className="grid grid-cols-3 gap-3">
-                <p className="text-white lg:text-xl">Asosiy</p>
-                <p className="text-white lg:text-xl">Faoliyat</p>
-                <div className="flex items-center gap-2">
-                  <p className="text-white lg:text-xl">Instagram</p>
-                  <div className="w-[20px] h-[20px] text-white flex items-center justify-center">
-                    <img src="/icon.svg" alt="" />
-                  </div>
-                </div>
-
-                <p className="text-white lg:text-xl">Narxlar</p>
-                <p className="text-white lg:text-xl">Biz haqimizda</p>
-                <div className="flex items-center gap-2">
-                  <p className="text-white lg:text-xl">Telegram</p>
-                  <div className="w-[20px] h-[20px] text-white flex items-center justify-center">
-                    <img src="/icon.svg" alt="" />
-                  </div>
-                </div>
-                <p className="text-white lg:text-xl">Loyihalar</p>
-                <p className="text-white lg:text-xl">Aloqa</p>
-                <div className="flex items-center gap-2">
-                  <p className="text-white lg:text-xl">YouTube</p>
-                  <div className="w-[20px] h-[20px] text-white flex items-center justify-center">
-                    <img src="/icon.svg" alt="" />
-                  </div>
-                </div>
+              <h1 className="text-white text-2xl lg:text-4xl">Sayt haritasi</h1>
+              <div className="grid grid-cols-2 gap-3 text-white text-lg lg:text-xl">
+                <p>Asosiy</p>
+                <p>Faoliyat</p>
+                <p>Narxlar</p>
+                <p>Biz haqimizda</p>
+                <p>Loyihalar</p>
+                <p>Aloqa</p>
               </div>
             </div>
             <div className="flex flex-col gap-4 mt-4">
-              <h1 className="text-white lg:text-4xl">Aloqa</h1>
+              <h1 className="text-white text-2xl lg:text-4xl">Aloqa</h1>
               <div className="flex flex-col gap-4">
-                <div className="flex gap-2 items-start">
-                  <h2 className="text-white lg:text-2xl">Manzil:</h2>
-                  <p className="text-white lg:text-2xl">
+                <div className="flex gap-2 items-start text-white text-lg lg:text-xl">
+                  <h2>Manzil:</h2>
+                  <p>
                     Xorazm viloyati, Urganch tumani, Gaybu qishlogi
                   </p>
                 </div>
-                <div className="flex gap-2 items-start">
-                  <h2 className="text-white lg:text-2xl">Telefon:</h2>
+                <div className="flex gap-2 items-start text-white text-lg lg:text-xl">
+                  <h2>Telefon:</h2>
                   <div>
-                    <p className="text-white lg:text-2xl">+998 99 999 99 99</p>
-                    <p className="text-white lg:text-2xl">+998 99 999 99 99</p>
+                    <p>+998 99 999 99 99</p>
+                    <p>+998 99 999 99 99</p>
                   </div>
                 </div>
                 <div className="flex gap-2 items-start">
-                  <h2 className="text-white lg:text-2xl">E-mail:</h2>
-                  <p className="text-white lg:text-2xl">
-                    buyurtma@bunyodhouse.uz
-                  </p>
-                </div>
-                <div className="flex gap-2 items-start">
-                  <h2 className="text-lg lg:text-2xl">
-                    Biz ijtimoiy tarmoqlarda:
-                  </h2>
-                  <div>
-                    <p className="text-base lg:text-xl mt-1">Instagram</p>
-                    <p className="text-base lg:text-xl">YouTube</p>
-                    <p className="text-base lg:text-xl">Telegram</p>
+                  <div className="flex gap-10 text-white text-lg lg:text-xl">
+                    <p>Instagram</p>
+                    <p>YouTube</p>
+                    <p>Telegram</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+          <div className="w-full h-[40px] mt-6 flex flex-col items-center justify-center">
+            <p className="text-[#FFC045] text-xs">
+              © 2022 Bunyod House. Developed by <a href="https://t.me/maykl_web" target="_black"> ME :)</a>
+            </p>
+          </div>
         </div>
       </div>
-      <div className="container bg-black w-full h-[40px] flex flex-col items-center justify-center">
-        <p className="text-white text-xs">
-          © 2022 Bunyod House. Developed by{" "}
-          <a href="https://t.me/maykl_web" target="_black">
-            MAYKL
-          </a>
-          .
-        </p>
-      </div>
+
     </footer>
   );
 }
