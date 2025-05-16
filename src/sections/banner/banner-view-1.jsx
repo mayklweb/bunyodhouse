@@ -12,7 +12,7 @@ function BannerView1() {
     const tl = gsap.timeline({ delay: 4, ease: "power3.out", smoothOrigin: true });
 
     tl.to(video.current, {
-      width: "80vw",
+      width: "60vw",
       height: "60vh",
       duration: 1.6,
       zIndex: 0
@@ -26,7 +26,7 @@ function BannerView1() {
           <source src="/banner.mp4" type="video/mp4" />
         </video>
         <div className="w-full absolute top-6/8 left-1/2 h-full -translate-x-2/4 -translate-y-2/4 flex flex-col items-center justify-center">
-          <button className="w-[200px] h-[40px] text-white bg-[#FFC045] cursor-pointer">360° TOUR</button>
+          <button className="w-[300px] h-[60px] text-white text-xl  border-2 border-[#FFC045] cursor-pointer backdrop-blur-2xl">360° TOUR</button>
         </div>
       </div>
     </div>

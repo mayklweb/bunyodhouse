@@ -127,7 +127,7 @@ function Contact() {
         </div>
 
       </div>
-      <div className="w-full lg:2/4 h-[400px] relative shadow-[inset_0px_0px_20px_10px_#ffffff]">
+      <div className="w-full lg:2/4 h-[400px] relative shadow-[inset_0px_0px_20px_10px_#ffffff] mt-10">
         <div
           id="map"
           className="w-full h-full absolute shadow-[inset_0px_0px_20px_10px_#ffffff]"
