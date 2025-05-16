@@ -45,7 +45,7 @@ function Info() {
         <div className="container py-20 bg-[url('/house-2.svg')] bg-no-repeat bg-right-bottom bg-[length:100%_100%] lg:bg-[length:50%_90%]">
           <h1 className="text-4xl text-[#FFC045]">Faoliyat</h1>
           <div className="flex gap-10 mt-10">
-            <div className="w-2/4 flex flex-col gap-10">
+            <div className="w-full md:w-2/4 flex flex-col gap-10">
               <div className="con w-full flex gap-2 md:gap-4">
                 <h1 className="text text-[#FFC045] text-xl md:text-xl lg:text-4xl">
                   01.
@@ -74,11 +74,11 @@ function Info() {
                 </h1>
               </div>
             </div>
-            <div className="w-2/4">
+            {/* <div className="w-2/4"> */}
               {/* <video loop autoPlay muted className="w-full h-[400px] object-cover">
                 <source src="/banner.mp4" type="video/mp4" />
               </video> */}
-            </div>
+            {/* </div> */}
           </div>
         </div>
       </div>
