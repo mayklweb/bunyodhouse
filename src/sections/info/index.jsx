@@ -47,7 +47,7 @@ function Info() {
           <div className="flex gap-10 mt-10">
             <div className="w-full md:w-2/4 flex flex-col gap-10">
               <div className="con w-full flex gap-2 md:gap-4">
-                <h1 className="text text-[#FFC045] text-xl md:text-xl lg:text-4xl">
+                <h1 className="text text-[#FFC045] text-2xl md:text-2xl lg:text-5xl leading-[120%]">
                   01.
                 </h1>
                 <h1 className="text text-[#030303] text-2xl md:text-2xl lg:text-5xl leading-[120%]">
@@ -57,7 +57,7 @@ function Info() {
               </div>
 
               <div className="con w-full flex gap-2 md:gap-4">
-                <h1 className="text text-[#FFC045] text-xl md:text-xl lg:text-4xl leading-[120%]">
+                <h1 className="text text-[#FFC045] text-2xl md:text-2xl lg:text-5xl leading-[120%]">
                   02.
                 </h1>
                 <h1 className="text text-[#030303] text-2xl md:text-2xl lg:text-5xl leading-[120%]">
@@ -66,7 +66,7 @@ function Info() {
               </div>
 
               <div className="con w-full  flex gap-2 md:gap-4">
-                <h1 className="text text-[#FFC045] text-xl md:text-xl lg:text-4xl leading-[120%]">
+                <h1 className="text text-[#FFC045] text-2xl md:text-2xl lg:text-5xl leading-[120%]">
                   03.
                 </h1>
                 <h1 className="text text-[#030303] text-2xl md:text-2xl lg:text-5xl leading-[120%]">
@@ -75,7 +75,7 @@ function Info() {
               </div>
             </div>
             {/* <div className="w-2/4"> */}
-              {/* <video loop autoPlay muted className="w-full h-[400px] object-cover">
+            {/* <video loop autoPlay muted className="w-full h-[400px] object-cover">
                 <source src="/banner.mp4" type="video/mp4" />
               </video> */}
             {/* </div> */}

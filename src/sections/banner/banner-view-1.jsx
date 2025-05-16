@@ -12,8 +12,8 @@ function BannerView1() {
     const tl = gsap.timeline({ delay: 4, ease: "power3.out", smoothOrigin: true });
 
     tl.to(video.current, {
-      height: "50vh",
-      width: "50vw",
+      width: "80vw",
+      height: "60vh",
       duration: 1.6,
       zIndex: 0
     }, "end");
