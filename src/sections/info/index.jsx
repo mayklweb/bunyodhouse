@@ -44,7 +44,7 @@ function Info() {
       <div className="scene py-10">
         <div className="container py-20 ">
           <h1 className="text-4xl text-[#FFC045]">Faoliyat</h1>
-          <div className="flex gap-10 mt-10 bg-[url('/info.webp')] bg-no-repeat bg-right bg-[length:100%_100%] md:bg-[length:60%_100%] lg:bg-[length:50%_100%]">
+          <div className="flex gap-10 mt-10  md:bg-[url('/info.webp')] bg-no-repeat bg-right bg-[length:100%_100%] md:bg-[length:60%_100%] lg:bg-[length:50%_100%]">
             <div className="w-full md:w-3/4 lg:w-3/5 flex flex-col gap-10">
               <div className="con w-full flex gap-2 md:gap-2">
                 <h1 className="text text-[#FFC045] text-2xl md:text-2xl lg:text-5xl leading-[120%]">

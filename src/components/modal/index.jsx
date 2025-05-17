@@ -2,7 +2,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 
-function Modal({ openModal, setOpenModal }) {
+function Modal({ openModal }) {
     const containerRef = useRef(null);
     const [showModal, setShowModal] = useState(false);
 
@@ -19,7 +19,7 @@ function Modal({ openModal, setOpenModal }) {
             gsap.fromTo(
                 containerRef.current,
                 { height: '0%' },
-                { duration: 0.8, ease: 'power3.out', height: '36%' }
+                { duration: 0.8, ease: 'power3.out', height: '262px' }
             );
         }
     }, [showModal]);
@@ -53,8 +53,8 @@ function Modal({ openModal, setOpenModal }) {
     if (!showModal) return null;
 
     return (
-        <div ref={containerRef} className="fixed top-0 left-0 w-full bg-white z-40 overflow-hidden">
-            <div className='w-full h-full flex flex-col justify-end pt-34 shadow-lg shadow-[#FFC045]'>
+        <div ref={containerRef} className="fixed top-0 left-0 w-full bg-white z-40 overflow-hidden shadow-lg">
+            <div className='w-full h-full flex flex-col justify-end pt-34 '>
                 <div className='border-y border-[#FFC045] w-full p-2'>
                     <h1 className="text-lg text-[#FFC045]">ASOSIY</h1>
                 </div>
