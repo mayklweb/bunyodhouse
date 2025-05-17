@@ -8,13 +8,20 @@ import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
 
-function Header() {
+function Header({ openModal, setOpenModal }) {
   const header = useRef([]);
   const logo = useRef(null);
   const navLeft = useRef(null);
   const navRight = useRef(null);
   const menu = useRef(null);
-  const call = useRef(null);
+
+  const closeOpen = () => {
+    if (openModal) {
+      setOpenModal(false);
+    } else {
+      setOpenModal(true);
+    }
+  };
 
   useEffect(() => {
     const isMobile = window.innerWidth < 768;
@@ -23,7 +30,7 @@ function Header() {
       height: "100%",
       willChange: "height",
       backgroundColor: "white",
-      backdropFilter: "blur(0px)",
+      backdropFilter: "blur(10px)",
     });
 
     gsap.set(logo.current, {
@@ -41,7 +48,7 @@ function Header() {
       y: 20,
     });
 
-    gsap.set([menu.current, call.current], {
+    gsap.set(menu.current, {
       opacity: 0,
       y: 20,
     });
@@ -53,8 +60,8 @@ function Header() {
     tl.to(header.current, {
       height: isMobile ? "80px" : "120px",
       duration: 3,
-      backgroundColor: "transparent",
-      backdropFilter: "blur(10px)",
+      // backgroundColor: "transparent",
+      // backdropFilter: "blur(10px)",/
     }, "end");
 
     tl.to(
@@ -62,13 +69,12 @@ function Header() {
       {
         scale: 1,
         duration: 1.4,
-
       },
       "1"
     );
 
     tl.to(
-      [call.current, menu.current],
+      menu.current,
       {
         opacity: 1,
         y: 0,
@@ -125,18 +131,13 @@ function Header() {
 
 
   return (
-    <header
-      className="header"
-    >
-      <div ref={header} className="header-row fixed top-0 left-0 z-50 overflow-hidden w-full py-4 md:py-6 lg:py-8 flex justify-between items-center  will-change-transform">
+    <header>
+      <div ref={header} className="header-row bg-white fixed top-0 left-0 z-50 overflow-hidden w-full py-4 md:py-6 lg:py-8 flex justify-between items-center will-change-transform">
 
         <div className="container">
-          <div className=" flex justify-between items-center relative">
-            <button className="lg:hidden">
-              <span ref={menu}>
-                <AlignJustify />
-              </span>
-            </button>
+          <div className="flex justify-between items-center relative">
+            <div className="lg:hidden"></div>
+
             <div ref={navLeft} className="hidden lg:flex gap-4">
               <Link className="text-[#FFC045]" href={"main"}>
                 ASOSIY
@@ -144,6 +145,7 @@ function Header() {
               <Link href={"main"}>BIZNING LOYIHALAR</Link>
               <Link href={"main"}>BIZ HAQIMIZDA</Link>
             </div>
+
             <div className="top-2/4 left-2/4 transform-gpu -translate-x-2/4 -translate-y-2/4 absolute">
               <Link href={"/"}>
                 <img
@@ -154,11 +156,13 @@ function Header() {
                 />
               </Link>
             </div>
-            <button className="lg:hidden">
-              <span ref={call}>
-                <Phone size={24} strokeWidth={1.5} />
+
+            <button onClick={closeOpen} className="lg:hidden">
+              <span ref={menu}>
+                <AlignJustify />
               </span>
             </button>
+
             <div ref={navRight} className="hidden lg:flex gap-4">
               <Link href={"main"}>BIZNING LOYIHALAR</Link>
               <Link href={"main"}>BIZ HAQIMIZDA</Link>

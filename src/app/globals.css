@@ -7,6 +7,7 @@
 }
 
 body {
+  background-color: #fffefa;
   font-family: var(--font-belleza-sans), sans-serif;
 }
 
@@ -27,7 +28,7 @@ body,
   user-select: none;
   display: flex;
   flex-direction: column;
-  background-color: #fffefa;
+
   color: #030303;
 } */
 

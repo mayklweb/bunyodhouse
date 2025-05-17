@@ -43,7 +43,7 @@ export const metadata = {
   publisher: "Bunyod House",
   description:
     "Bunyod House - Xorazm viloyatida arzon va sifatli uylar qurish bilan shug'ullanadi. Bizning uylarimiz zamonaviy dizayni va sifatli materiallari bilan ajralib turadi. Biz mijozlarimizga eng yaxshi xizmatni taqdim etishga intilamiz.",
-  openGraph: {  
+  openGraph: {
     title: "Bunyod House | Xorazm, Urganch",
     description:
       "Bunyod House - Xorazm viloyatida arzon va sifatli uylar qurish bilan shug'ullanadi. Bizning uylarimiz zamonaviy dizayni va sifatli materiallari bilan ajralib turadi. Biz mijozlarimizga eng yaxshi xizmatni taqdim etishga intilamiz.",
@@ -80,13 +80,14 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  return (
-    <html lang="en">
-      <body
-        className={`${aboreto.variable} ${geistMono.variable} ${geistSans.variable} ${belleza.variable} antialiased`}
-      >
-        {children}
-      </body>
-    </html>
-  );
+  if (typeof window !== "undefined") return null;
+    return (
+      <html lang="en">
+        <body
+          className={`${aboreto.variable} ${geistMono.variable} ${geistSans.variable} ${belleza.variable} antialiased`}
+        >
+          {children}
+        </body>
+      </html>
+    );
 }
