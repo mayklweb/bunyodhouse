@@ -13,7 +13,7 @@ function Comments() {
 
   useEffect(() => {
     setIsMobile(window.innerWidth > 768);
-  }, [isMobile]);
+  }, []);
 
   console.log(isMobile);
 
