@@ -37,7 +37,7 @@ function Comments() {
                 spaceBetween={24}
                 grabCursor={true}
                 modules={[EffectCards, Pagination]}
-                className={`${isMobile ? "block" : "hidden"} my-10 w-[74  %] md:w-full`}
+                className={`${isMobile ? "block" : "hidden"} my-10 w-[74%] md:w-full`}
               >
                 <SwiperSlide className="w-full p-4 lg:p-6 text-white bg-[#FFC045]">
                   <h3 className="text-4xl md:text-3xl lg:text-5xl font-semibold">
