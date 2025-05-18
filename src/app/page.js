@@ -18,8 +18,8 @@ export default function Home() {
       <main>
         <BannerView1/>
         {/* <Banner /> */}
-        <AboutView1/>
-        {/* <About /> */}
+        {/* <AboutView1/> */}
+        <About />
         <Project />
         <Info />
         <Comments />
