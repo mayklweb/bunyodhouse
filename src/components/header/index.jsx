@@ -159,6 +159,7 @@ function Header({ openModal, setOpenModal }) {
 
             <button
               onClick={closeOpen}
+              ref={menu}
               className="lg:hidden relative w-10 h-2 focus:outline-none"
               aria-label="Toggle menu"
             >

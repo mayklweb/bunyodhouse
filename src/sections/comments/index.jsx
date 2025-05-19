@@ -40,7 +40,7 @@ function Comments() {
                 className={`${isMobile ? "block" : "hidden"} my-10 w-[75%] md:w-full`}
               >
                 <SwiperSlide className="w-full p-2 md:p-4 lg:p-6 text-white bg-[#FFC045]">
-                  <h3 className="text-4xl md:text-3xl lg:text-5xl font-semibold">
+                  <h3 className="text-3xl md:text-3xl lg:text-5xl font-semibold">
                     Katta rahmat!
                   </h3>
                   <p className="text-base md:text-lg lg:text-xl mt-2 lg:mt-4">
@@ -54,7 +54,7 @@ function Comments() {
                   </div>
                 </SwiperSlide>
                 <SwiperSlide className="w-full p-4 lg:p-6 text-white bg-[#FFC045]">
-                  <h3 className="text-[32px] md:text-3xl lg:text-5xl font-semibold leading-[120%]">
+                  <h3 className="text-3xl md:text-3xl lg:text-5xl font-semibold leading-[120%]">
                     Hammaga tavsiya qilaman!
                   </h3>
                   <p className="text-base md:text-lg lg:text-xl mt-2 lg:mt-4">
@@ -68,7 +68,7 @@ function Comments() {
                   </div>
                 </SwiperSlide>
                 <SwiperSlide className="w-full p-4 lg:p-6 text-white bg-[#FFC045]">
-                  <h3 className="text-4xl md:text-3xl lg:text-5xl font-semibold">
+                  <h3 className="text-3xl md:text-3xl lg:text-5xl font-semibold">
                     Ajoyib narxlar!
                   </h3>
                   <p className="text-base md:text-lg lg:text-xl mt-2 lg:mt-4">
