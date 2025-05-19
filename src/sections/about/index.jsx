@@ -25,7 +25,7 @@ function About() {
               start: "top 60%",
               end: "center top",
               scrub: 3,
-              toggleActions: "none none none none",
+              toggleActions: "play none none none",
             },
             duration: 5,
             yPercent: 100,
@@ -41,6 +41,7 @@ function About() {
   return (
     <section className="py-10">
       <div className="w-full bg-no-repeat bg-center bg-cover bg-[url('/about.webp')] px-[4%] flex flex-col gap-10">
+      <h1 className="text-4xl text-[#FFC045]">Biz xaqimizda</h1>
         <div className="w-full mt-4 xs:mt-6 md:mt-8 py-6 lg:mt-10 hidden md:block">
           {/* <div className="con">
             <h1 className=" text-[#FFC045] font-outfit text-4xl lg:text-9xl font-extrabold text-center">
@@ -48,7 +49,7 @@ function About() {
             </h1>
           </div> */}
           <div className="con w-full mt-6 lg:mt-10 flex justify-start">
-            <h3 className="split w-5/6 md:w-3/4 text-base xs:text-lg md:text-2xl lg:text-3xl xl:text-4xl mt-2 font-normal text-justify ">
+            <h3 className="split w-5/6 md:w-2/4 text-base xs:text-lg md:text-2xl lg:text-3xl xl:text-4xl mt-2 font-normal text-justify ">
               "Bunyod House" qurilish firmasi Xorazm viloyatida 2019-yilda
               tashkil topgan.
             </h3>
