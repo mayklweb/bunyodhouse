@@ -157,16 +157,28 @@ function Header({ openModal, setOpenModal }) {
               </Link>
             </div>
 
-            <button onClick={closeOpen} className="lg:hidden">
-              <span ref={menu}>
-                <AlignJustify />
-              </span>
+            <button onClick={closeOpen} className="lg:hidden relative w-10 h-10">
+              <div className="relative w-full h-full flex justify-center items-center">
+                <span
+                  className={`w-8 h-0.5 bg-black absolute transition-all duration-500 ease-in-out 
+        left-1/2 top-1/3 -translate-x-1/3 -translate-y-1/3
+        ${openModal ? 'rotate-45 top-1/3' : ''}`}
+                ></span>
+                <span
+                  className={`w-8 h-0.5 bg-black absolute transition-all duration-500 ease-in-out 
+        left-1/2 bottom-1/3 -translate-x-1/3 -translate-y-1/3
+        ${openModal ? '-rotate-45 bottom-2/3' : ''}`}
+                ></span>
+              </div>
             </button>
+
+
+
+
 
             <div ref={navRight} className="hidden lg:flex gap-4">
               <Link href={"main"}>BIZNING LOYIHALAR</Link>
               <Link href={"main"}>BIZ HAQIMIZDA</Link>
-              <p></p>
             </div>
           </div>
         </div>
