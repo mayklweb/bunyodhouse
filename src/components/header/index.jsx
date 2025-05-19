@@ -157,17 +157,21 @@ function Header({ openModal, setOpenModal }) {
               </Link>
             </div>
 
-            <button onClick={closeOpen} className="lg:hidden relative w-10 h-10">
+            <button
+              onClick={closeOpen}
+              className="lg:hidden relative w-10 h-2 focus:outline-none"
+              aria-label="Toggle menu"
+            >
               <div className="relative w-full h-full flex justify-center items-center">
+                {/* Top line */}
                 <span
-                  className={`w-8 h-0.5 bg-black absolute transition-all duration-500 ease-in-out 
-        left-1/2 top-1/3 -translate-x-1/3 -translate-y-1/3
-        ${openModal ? 'rotate-45 top-1/3' : ''}`}
+                  className={`w-10 h-0.5 bg-black absolute transition-all duration-500 ease-in-out 
+        ${openModal ? 'rotate-26 translate-y-0 top-1/2' : 'top-0 -translate-y-1/2'}`}
                 ></span>
+
                 <span
-                  className={`w-8 h-0.5 bg-black absolute transition-all duration-500 ease-in-out 
-        left-1/2 bottom-1/3 -translate-x-1/3 -translate-y-1/3
-        ${openModal ? '-rotate-45 bottom-2/3' : ''}`}
+                  className={`w-10 h-0.5 bg-black absolute transition-all duration-500 ease-in-out 
+        ${openModal ? '-rotate-26 translate-y-0 top-1/2' : 'top-full -translate-y-1/2'}`}
                 ></span>
               </div>
             </button>
