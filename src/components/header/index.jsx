@@ -5,6 +5,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { AlignJustify, Phone } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -148,7 +149,7 @@ function Header({ openModal, setOpenModal }) {
 
             <div className="top-2/4 left-2/4 transform-gpu -translate-x-2/4 -translate-y-2/4 absolute">
               <Link href={"/"}>
-                <img
+                <Image
                   ref={logo}
                   src="/logo.svg"
                   alt="logo"

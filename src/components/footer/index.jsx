@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -11,7 +12,7 @@ function Footer() {
           <div className="grid grid-row-3 lg:grid-cols-3 gap-10 justify-between pt-20">
             <div className="w-full lg:w-[80%] flex flex-col items-center ">
               <div className="w-[80%]">
-                <img src="/logo.svg" alt="" />
+                <Image src="/logo.svg" alt="" />
               </div>
               {/* <p className="text-white text-justify mt-2">
                 "Bunyod House" qurilish firmasi Xorazm viloyatida 2019-yilda
