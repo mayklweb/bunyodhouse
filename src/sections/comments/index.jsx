@@ -6,6 +6,7 @@ import { EffectCards, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-cards";
 import "swiper/css/pagination";
+import { comments } from "@/utils/data";
 
 function Comments() {
 
@@ -14,9 +15,6 @@ function Comments() {
   useEffect(() => {
     setIsMobile(window.innerWidth > 768);
   }, []);
-
-  console.log(isMobile);
-
 
   return (
     <div>
@@ -39,96 +37,45 @@ function Comments() {
                 modules={[EffectCards, Pagination]}
                 className={`${isMobile ? "block" : "hidden"} my-10 w-[75%] md:w-full`}
               >
-                <SwiperSlide className="w-full p-2 md:p-4 lg:p-6 text-white bg-[#FFC045]">
-                  <h3 className="text-3xl md:text-3xl lg:text-5xl font-semibold">
-                    Katta rahmat!
-                  </h3>
-                  <p className="text-base md:text-lg lg:text-xl mt-2 lg:mt-4">
-                    Uy sotib olganimizdan judayam xursandmiz. Narxlar arzon va
-                    uylar sifatli.
-                  </p>
-                  <div className="w-full mt-6 flex justify-end">
-                    <p className="text-xl lg:text-2xl">
-                      — G'oybu, Alisher
-                    </p>
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide className="w-full p-4 lg:p-6 text-white bg-[#FFC045]">
-                  <h3 className="text-3xl md:text-3xl lg:text-5xl font-semibold leading-[120%]">
-                    Hammaga tavsiya qilaman!
-                  </h3>
-                  <p className="text-base md:text-lg lg:text-xl mt-2 lg:mt-4">
-                    2 oy oldin uy sotib oldik. Judayam mamnunmiz "Bunyod House"
-                    dan.
-                  </p>
-                  <div className="w-full mt-6 flex justify-end">
-                    <p className="text-xl lg:text-2xl">
-                      — Urganch, Sarvar
-                    </p>
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide className="w-full p-4 lg:p-6 text-white bg-[#FFC045]">
-                  <h3 className="text-3xl md:text-3xl lg:text-5xl font-semibold">
-                    Ajoyib narxlar!
-                  </h3>
-                  <p className="text-base md:text-lg lg:text-xl mt-2 lg:mt-4">
-                    Yaqinda oilamiz uchun uy sotib oldik. Sifatiga gap yuq. "Bunyod
-                    House"ga rahmat.
-                  </p>
-                  <div className="w-full mt-6 flex justify-end">
-                    <p className="text-xl lg:text-2xl">
-                      — G'oybu, Alisher
-                    </p>
-                  </div>
-                </SwiperSlide>
+                {
+                  comments.map(({ id, name, title, subtitle }) => (
+                    <SwiperSlide key={id} className="w-full p-4 lg:p-6 text-white bg-[#FFC045]">
+                      <h3 className="text-3xl md:text-3xl lg:text-5xl font-semibold">
+                        {title}
+                      </h3>
+                      <p className="text-base md:text-lg lg:text-xl mt-2 lg:mt-4">
+                        {subtitle}
+                      </p>
+                      <div className="w-full mt-6 flex justify-end">
+                        <p className="text-xl lg:text-2xl">
+                          {name}
+                        </p>
+                      </div>
+                    </SwiperSlide>
+                  ))
+                }
               </Swiper>
             </div>
 
             <div className={`${isMobile ? "block" : "hidden"} flex items-start gap-6`}>
-              <div className="w-full p-4 lg:p-6 text-white bg-[#FFC045]">
-                <h3 className="text-4xl md:text-3xl lg:text-5xl font-semibold">
-                  Katta rahmat!
-                </h3>
-                <p className="text-base md:text-lg lg:text-xl mt-2 lg:mt-4">
-                  Uy sotib olganimizdan judayam xursandmiz. Narxlar arzon va
-                  uylar sifatli.
-                </p>
-                <div className="w-full mt-6 flex justify-end">
-                  <p className="text-xl lg:text-2xl">
-                    — G'oybu, Alisher
-                  </p>
-                </div>
-              </div>
-              <div className="w-full p-4 lg:p-6 text-white bg-[#FFC045]">
-                <h3 className="text-[32px] md:text-3xl lg:text-5xl font-semibold leading-[120%]">
-                  Hammaga tavsiya qilaman!
-                </h3>
-                <p className="text-base md:text-lg lg:text-xl mt-2 lg:mt-4">
-                  2 oy oldin uy sotib oldik. Judayam mamnunmiz "Bunyod House"
-                  dan.
-                </p>
-                <div className="w-full mt-6 flex justify-end">
-                  <p className="text-xl lg:text-2xl">
-                    — Urganch, Sarvar
-                  </p>
-                </div>
-              </div>
-              <div className="w-full p-4 lg:p-6 text-white bg-[#FFC045]">
-                <h3 className="text-4xl md:text-3xl lg:text-5xl font-semibold">
-                  Ajoyib narxlar!
-                </h3>
-                <p className="text-base md:text-lg lg:text-xl mt-2 lg:mt-4">
-                  Yaqinda oilamiz uchun uy sotib oldik. Sifatiga gap yuq. "Bunyod
-                  House"ga rahmat.
-                </p>
-                <div className="w-full mt-6 flex justify-end">
-                  <p className="text-xl lg:text-2xl">
-                    — G'oybu, Alisher
-                  </p>
-                </div>
-              </div>
+              {
+                comments.map(({ id, name, title, subtitle }) => {
+                  <div key={id} className="w-full p-4 lg:p-6 text-white bg-[#FFC045]">
+                    <h3 className="text-4xl md:text-3xl lg:text-5xl font-semibold">
+                      {title}
+                    </h3>
+                    <p className="text-base md:text-lg lg:text-xl mt-2 lg:mt-4">
+                      {subtitle}
+                    </p>
+                    <div className="w-full mt-6 flex justify-end">
+                      <p className="text-xl lg:text-2xl">
+                        {name}
+                      </p>
+                    </div>
+                  </div>
+                })
+              }
             </div>
-
           </div>
         </div>
       </div>
