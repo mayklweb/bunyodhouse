@@ -40,7 +40,7 @@ function Info() {
   }, []);
 
   return (
-    <section>
+    <section id="info">
       <div className="scene py-10">
         <div className="container py-20 ">
           <h1 className="text-4xl text-[#FFC045]">Faoliyat</h1>

@@ -39,7 +39,7 @@ function About() {
   }, []);
 
   return (
-    <section className="py-10">
+    <section id="about" className="py-10">
       <div className="w-full bg-no-repeat bg-center bg-cover bg-[url('/about.webp')] flex flex-col">
         <div className="container">
       <h1 className="text-4xl text-[#FFC045]">Biz xaqimizda</h1>

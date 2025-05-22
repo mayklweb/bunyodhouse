@@ -6,9 +6,10 @@
   --font-belleza: var(--font-belleza-sans);
 }
 
-body {
+html,body {
   background-color: #fffefa;
   font-family: var(--font-belleza-sans), sans-serif;
+  scroll-behavior: smooth;
 }
 
 

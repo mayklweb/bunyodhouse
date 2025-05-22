@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import React from "react";
 
 function Footer() {
@@ -21,12 +22,12 @@ function Footer() {
             <div className="flex flex-col gap-4 mt-4">
               <h1 className="text-white text-2xl lg:text-4xl">Sayt haritasi</h1>
               <div className="grid grid-cols-2 gap-3 text-white text-lg lg:text-xl">
-                <p>Asosiy</p>
-                <p>Faoliyat</p>
-                <p>Narxlar</p>
-                <p>Biz haqimizda</p>
-                <p>Loyihalar</p>
-                <p>Aloqa</p>
+                <Link href={'/'}>Asosiy</Link>
+                <Link href={'#info'}>Faoliyat</Link>
+                <Link href={'#projects'}>Xonadonlar</Link>
+                <Link href={'#about'}>Biz haqimizda</Link>
+                <Link href={'#projects'}>Loyihalar</Link>
+                <Link href={'#contact'}>Aloqa</Link>
               </div>
             </div>
             <div className="flex flex-col gap-4 mt-4">

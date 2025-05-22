@@ -139,11 +139,11 @@ function Header({ openModal, setOpenModal }) {
             <div className="lg:hidden"></div>
 
             <div ref={navLeft} className="hidden lg:flex gap-4">
-              <Link className="text-[#FFC045]" href={"main"}>
+              <Link className="text-[#FFC045]" href={"/"}>
                 ASOSIY
               </Link>
-              <Link href={"main"}>BIZNING LOYIHALAR</Link>
-              <Link href={"main"}>BIZ HAQIMIZDA</Link>
+              <Link href={"#about"}>BIZ HAQIMIZDA</Link>
+              <Link href={"#projects"}>XONADONLAR</Link>
             </div>
 
             <div className="top-2/4 left-2/4 transform-gpu -translate-x-2/4 -translate-y-2/4 absolute">
@@ -182,8 +182,9 @@ function Header({ openModal, setOpenModal }) {
 
 
             <div ref={navRight} className="hidden lg:flex gap-4">
-              <Link href={"main"}>BIZNING LOYIHALAR</Link>
-              <Link href={"main"}>BIZ HAQIMIZDA</Link>
+              <Link href={"#info"}>LOYIHALAR</Link>
+              <Link href={"#info"}>FAOLIYAT</Link>
+              <Link href={"#contact"}>ALOQA</Link>
             </div>
           </div>
         </div>

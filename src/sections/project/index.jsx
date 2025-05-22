@@ -103,7 +103,7 @@ function Project() {
   ];
 
   return (
-    <div>
+    <section id="projects">
       <div className="container">
         <h1 className="text-4xl text-[#FFC045]">Tayor xonadonlar</h1>
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6 py-10">
@@ -144,7 +144,7 @@ function Project() {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

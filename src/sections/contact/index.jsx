@@ -30,7 +30,7 @@ function Contact() {
   }, []);
 
   return (
-    <div className="mt-10">
+    <section id="contact" className="mt-10">
       <div className="max-w-[1024px] w-full mx-auto px-4">
         {/* <h1 className="text-4xl text-[#FFC045] mb-10">Aloqa</h1> */}
         <div className="w-full flex flex-col-reverse lg:flex-row gap-10 relative">
@@ -132,9 +132,9 @@ function Contact() {
           id="map"
           className="w-full h-full absolute shadow-[inset_0px_0px_20px_10px_#ffffff]"
         ></div>
-        <div className="w-full h-full  shadow-[inset_0px_0px_20px_20px_#ffffff] bg-no-repeat bg-cover bg-center absolute  align-bottom"></div>
+        <div className="w-full h-full pointer-events-none aling-bottom shadow-[inset_0px_0px_20px_20px_#ffffff] bg-no-repeat bg-cover bg-center absolute  align-bottom"></div>
       </div>
-    </div>
+    </section>
   );
 }
 
