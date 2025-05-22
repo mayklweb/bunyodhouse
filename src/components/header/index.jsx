@@ -3,7 +3,6 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
-import { AlignJustify, Phone } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -25,7 +24,7 @@ function Header({ openModal, setOpenModal }) {
   };
 
   useEffect(() => {
-    const isMobile = window.innerWidth < 768;
+    const isMobile = window.innerWidth < 1024;
 
     gsap.set(header.current, {
       height: "100%",
@@ -150,6 +149,8 @@ function Header({ openModal, setOpenModal }) {
             <div className="top-2/4 left-2/4 transform-gpu -translate-x-2/4 -translate-y-2/4 absolute">
               <Link href={"/"}>
                 <Image
+                  width={100}
+                  height={100}
                   ref={logo}
                   src="/logo.svg"
                   alt="logo"
@@ -177,10 +178,6 @@ function Header({ openModal, setOpenModal }) {
                 ></span>
               </div>
             </button>
-
-
-
-
 
             <div ref={navRight} className="hidden lg:flex gap-4">
               <Link href={"#info"}>LOYIHALAR</Link>

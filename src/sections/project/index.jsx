@@ -114,7 +114,7 @@ function Project() {
               className={`card w-full p-2 md:p-4 border border-[#FFC045] flex flex-col gap-2 shadow-md`}
             >
               <div>
-                <Image src={item.image} alt="" />
+                <img src={item.image} alt="" />
               </div>
               <div>
                 <div className="flex gap-2 text-sm md:text-base">

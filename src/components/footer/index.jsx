@@ -12,7 +12,7 @@ function Footer() {
           <div className="grid grid-row-3 lg:grid-cols-3 gap-10 justify-between pt-20">
             <div className="w-full lg:w-[80%] flex flex-col items-center ">
               <div className="w-[80%]">
-                <Image src="/logo.svg" alt="" />
+                <Image width={100} height={100} src="/logo.svg" alt="" />
               </div>
               {/* <p className="text-white text-justify mt-2">
                 "Bunyod House" qurilish firmasi Xorazm viloyatida 2019-yilda
