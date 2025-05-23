@@ -58,7 +58,7 @@ const Tour = () => {
 
       panorama8.link(panorama7, new Vector3(-2400, 0, 400));
 
-      viewer.current.setPanorama(panorama6);
+      viewer.current.setPanorama(panorama1);
     };
 
     loadPanolens();
@@ -87,8 +87,11 @@ const Tour = () => {
 
 
 
-        <button>
-          FRONT
+        <button onClick={() => viewer.current.setPanorama("/tour/image-1.webp")}>
+          OLDI
+        </button>
+        <button onClick={() => viewer.current.setPanorama("/tour/image-4.webp")}>
+          ORQA
         </button>
 
 
@@ -98,4 +101,4 @@ const Tour = () => {
   );
 };
 
-export default dynamic(() => Promise.resolve(Tour), { ssr: false });
+export default dynamic(() => Promise.resolve(Tour), { ssr: true });
