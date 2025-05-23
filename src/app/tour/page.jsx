@@ -16,14 +16,14 @@ const Tour = () => {
     const loadPanolens = async () => {
       const PANOLENS = await import("panolens");
 
-      const panorama1 = new PANOLENS.ImagePanorama("/tour/image-1.jpg");
-      const panorama2 = new PANOLENS.ImagePanorama("/tour/image-2.jpg");
-      const panorama3 = new PANOLENS.ImagePanorama("/tour/image-3.jpg");
-      const panorama4 = new PANOLENS.ImagePanorama("/tour/image-4.jpg");
-      const panorama5 = new PANOLENS.ImagePanorama("/tour/image-5.jpg");
-      const panorama6 = new PANOLENS.ImagePanorama("/tour/image-6.jpg");
-      const panorama7 = new PANOLENS.ImagePanorama("/tour/image-7.jpg");
-      const panorama8 = new PANOLENS.ImagePanorama("/tour/image-8.jpg");
+      const panorama1 = new PANOLENS.ImagePanorama("/tour/image-1.webp");
+      const panorama2 = new PANOLENS.ImagePanorama("/tour/image-2.webp");
+      const panorama3 = new PANOLENS.ImagePanorama("/tour/image-3.webp");
+      const panorama4 = new PANOLENS.ImagePanorama("/tour/image-4.webp");
+      const panorama5 = new PANOLENS.ImagePanorama("/tour/image-5.webp");
+      const panorama6 = new PANOLENS.ImagePanorama("/tour/image-6.webp");
+      const panorama7 = new PANOLENS.ImagePanorama("/tour/image-7.webp");
+      const panorama8 = new PANOLENS.ImagePanorama("/tour/image-8.webp");
 
       viewer.current = new PANOLENS.Viewer({
         container: containerRef.current,
@@ -98,4 +98,4 @@ const Tour = () => {
   );
 };
 
-export default dynamic(() => Promise.resolve(Tour), { ssr: true });
+export default dynamic(() => Promise.resolve(Tour), { ssr: false });
