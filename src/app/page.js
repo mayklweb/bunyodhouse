@@ -2,10 +2,10 @@
 
 import { Footer, Header } from "@/components";
 import Modal from "@/components/modal";
-import { About, Banner, Comments, Contact, Project } from "@/sections";
-import AboutView1 from "@/sections/about/about-view-1";
-import BannerView1 from "@/sections/banner/banner-view-1";
-import Info from "@/sections/info";
+import { About, Banner, Comments, Contact, Project } from "@/app/sections";
+import AboutView1 from "@/app/sections/about/about-view-1";
+import BannerView1 from "@/app/sections/banner/banner-view-1";
+import Info from "@/app/sections/info";
 import { useState } from "react";
 
 export default function Home() {
