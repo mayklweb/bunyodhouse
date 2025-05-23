@@ -2,6 +2,7 @@
 
 import React, { useRef, useEffect } from "react";
 import gsap from "gsap";
+import Link from "next/link";
 
 function BannerView1() {
   const video = useRef(null);
@@ -27,7 +28,7 @@ function BannerView1() {
             <source src="/banner.mp4" type="video/mp4" />
           </video>
           <div className="w-full absolute top-6/8 left-1/2 h-full -translate-x-2/4 -translate-y-2/4 flex flex-col items-center justify-center">
-            <button className="w-[300px] h-[60px] text-white text-xl  border-2 border-[#FFC045] cursor-pointer backdrop-blur-2xl">360° TOUR</button>
+            <Link href={'/tour'} className="w-[300px] h-[60px] text-white text-xl  border-2 border-[#FFC045] cursor-pointer backdrop-blur-2xl">360° TOUR</Link>
           </div>
         </div>
       </div>
