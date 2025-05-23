@@ -180,7 +180,7 @@ function Header({ openModal, setOpenModal }) {
             </button>
 
             <div ref={navRight} className="hidden lg:flex gap-4">
-              <Link href={"#info"}>LOYIHALAR</Link>
+              <Link href={"/tour"}>TOUR</Link>
               <Link href={"#info"}>FAOLIYAT</Link>
               <Link href={"#contact"}>ALOQA</Link>
             </div>

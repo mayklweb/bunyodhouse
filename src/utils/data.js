@@ -40,8 +40,8 @@ export const menu = [
   },
   {
     id: 4,
-    path: "#projects",
-    text: "LOYIHALAR",
+    path: "/tour",
+    text: "TOUR",
   },
   {
     id: 5,
