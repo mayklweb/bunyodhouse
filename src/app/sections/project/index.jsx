@@ -108,7 +108,6 @@ function Project() {
       type: "House",
       room: 4,
     },
-
   ];
 
   return (
@@ -116,7 +115,7 @@ function Project() {
       <div className="container">
         <h1 className="text-4xl text-[#FFC045]">Tayor xonadonlar</h1>
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6 py-10">
-          {data.slice(1. ).map((item, i) => (
+          {data.map((item, i) => (
             <div
               key={i}
               className={`card w-full p-2 md:p-4 border border-[#FFC045] flex flex-col gap-2 shadow-md`}
