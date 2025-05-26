@@ -1,16 +1,20 @@
 // app/layout.js yoki layout.tsx
 import "./globals.css";
-import {
-  Geist,
-  Geist_Mono,
-  Aboreto,
-  Belleza,
-  Reem_Kufi,
-  Montserrat,
-} from "next/font/google";
+import { Inter, Montserrat } from "next/font/google";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
+  subsets: ["latin"],
+});
+
+const inter = Inter({
+  variable: "--font-inter",
+  display: "swap",
+  preload: true,
+  adjustFontFallback: true,
+  fallback: ["system-ui", "sans-serif"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  style: ["normal", "italic"],
   subsets: ["latin"],
 });
 
@@ -71,7 +75,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${montserrat.variable} `}>
+    <html lang="en" className={`${montserrat.variable} ${inter.variable}`}>
       <body className="antialiased">{children}</body>
     </html>
   );

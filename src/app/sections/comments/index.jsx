@@ -59,7 +59,7 @@ function Comments() {
 
             <div className={`${isMobile ? "block" : "hidden"} flex items-start gap-6`}>
               {
-                comments.map(({ id, name, title, subtitle }) => {
+                comments.map(({ id, name, title, subtitle }) => (
                   <div key={id} className="w-full p-4 lg:p-6 text-white bg-[#FFC045]">
                     <h3 className="text-4xl md:text-3xl lg:text-5xl font-semibold">
                       {title}
@@ -73,7 +73,7 @@ function Comments() {
                       </p>
                     </div>
                   </div>
-                })
+                ))
               }
             </div>
           </div>
