@@ -35,7 +35,7 @@ function Comments() {
                 spaceBetween={24}
                 grabCursor={true}
                 modules={[EffectCards, Pagination]}
-                className={`${isMobile ? "block" : "hidden"} my-10 w-[75%] md:w-full`}
+                className={`my-10 w-[75%] md:w-full`}
               >
                 {
                   comments.map(({ id, name, title, subtitle }) => (
