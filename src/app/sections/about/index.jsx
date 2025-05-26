@@ -60,8 +60,8 @@ function About() {
 
             <div className="con w-full mt-6 lg:mt-10 flex justify-start md:justify-evenly">
               <h3 className="split w-3/4 xs:w-5/6 md:w-[54%] text-base xs:text-lg md:text-2xl lg:text-3xl xl:text-4xl mt-2 font-normal text-justify">
-                Bizning uylar o'zining yuqori did va sifat bilan qurilganligi
-                sababli boshqalardan ajralib turadi.
+                Biz barpo qilgan uylar yuqori did va sifati bilan
+                boshqalardan ajralib turadi.
               </h3>
             </div>
             <div className="con w-full mt-6 lg:mt-10 flex justify-end">

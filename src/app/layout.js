@@ -1,31 +1,21 @@
+// app/layout.js yoki layout.tsx
 import "./globals.css";
-import { Geist, Geist_Mono, Aboreto, Belleza } from "next/font/google";
+import {
+  Geist,
+  Geist_Mono,
+  Aboreto,
+  Belleza,
+  Reem_Kufi,
+  Montserrat,
+} from "next/font/google";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-const aboreto = Aboreto({
-  weight: "400",
-  variable: "--font-aboreto-sans",
-  subsets: ["latin"],
-});
-
-const belleza = Belleza({
-  variable: "--font-belleza-sans",
-  weight: "400",
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
   subsets: ["latin"],
 });
 
 export const metadata = {
   title: "Bunyod House | Xorazm, Urganch",
-
   icons: {
     icon: "/logo.svg",
     shortcut: "/logo.svg",
@@ -46,7 +36,7 @@ export const metadata = {
   openGraph: {
     title: "Bunyod House | Xorazm, Urganch",
     description:
-      "Bunyod House - Xorazm viloyatida arzon va sifatli uylar qurish bilan shug'ullanadi. Bizning uylarimiz zamonaviy dizayni va sifatli materiallari bilan ajralib turadi. Biz mijozlarimizga eng yaxshi xizmatni taqdim etishga intilamiz.",
+      "Bunyod House - Xorazm viloyatida arzon va sifatli uylar qurish bilan shug'ullanadi...",
     url: "https://bunyodhouse.uz",
     siteName: "Bunyod House",
     images: [
@@ -61,7 +51,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Bunyod House | Xorazm, Urganch",
     description:
-      "Bunyod House - Xorazm viloyatida arzon va sifatli uylar qurish bilan shug'ullanadi. Bizning uylarimiz zamonaviy dizayni va sifatli materiallari bilan ajralib turadi. Biz mijozlarimizga eng yaxshi xizmatni taqdim etishga intilamiz.",
+      "Bunyod House - Xorazm viloyatida arzon va sifatli uylar qurish bilan shug'ullanadi...",
     images: ["/logo.svg"],
     creator: "@bunyodhouse",
   },
@@ -70,7 +60,7 @@ export const metadata = {
     uz: "https://bunyodhouse.uz",
   },
   verification: {
-    google: "google-site-verification=your-google-site-verification-code",
+    google: "your-google-site-verification-code",
     yandex: "your-yandex-verification-code",
   },
   robots: {
@@ -80,14 +70,9 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  if (typeof window !== "undefined") return null;
-    return (
-      <html lang="en">
-        <body
-          className={`${aboreto.variable} ${geistMono.variable} ${geistSans.variable} ${belleza.variable} antialiased`}
-        >
-          {children}
-        </body>
-      </html>
-    );
+  return (
+    <html lang="en" className={`${montserrat.variable} `}>
+      <body className="antialiased">{children}</body>
+    </html>
+  );
 }

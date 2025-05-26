@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import SplitText from "gsap/SplitText";
@@ -9,6 +9,13 @@ import Image from "next/image";
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
 function Project() {
+
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    setIsMobile(window.innerWidth > 768);
+  }, []);
+
   useEffect(() => {
     const cards = gsap.utils.toArray(".card");
 
@@ -73,7 +80,8 @@ function Project() {
       year: "2023",
       type: "House",
       room: 4,
-    }, {
+    },
+    {
       id: 1,
       image: "/project.webp",
       area: "110.34 m2",
@@ -108,7 +116,7 @@ function Project() {
       <div className="container">
         <h1 className="text-4xl text-[#FFC045]">Tayor xonadonlar</h1>
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6 py-10">
-          {data.map((item, i) => (
+          {data.slice(1. ).map((item, i) => (
             <div
               key={i}
               className={`card w-full p-2 md:p-4 border border-[#FFC045] flex flex-col gap-2 shadow-md`}

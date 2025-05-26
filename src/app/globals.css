@@ -1,67 +1,21 @@
 @import "tailwindcss";
 :root {
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-  --font-deco: var(--font-aboreto-sans);
-  --font-belleza: var(--font-belleza-sans);
+  --font-montserrat: var(--font-montserrat);
 }
 
-html,body {
+
+html, body {
   width: 100%;
   height: 100%;
   background-color: #fffefa;
-  font-family: var(--font-belleza-sans), sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
   scroll-behavior: smooth;
 }
 
-
-/* html,
-body,
-#root {
-  width: 100%;
-  height: 100%;
-  line-height: 120%;
-  position: relative;
-  font-size: inherit;
-  font-weight: normal;
-  letter-spacing: normal;
-  font-family: "Marcellus";
-  font-family: var(--font-sans);
-  scroll-behavior: smooth;
-  user-select: none;
-  display: flex;
-  flex-direction: column;
-
-  color: #030303;
-} */
 
 .container {
   width: 100%;
   max-width: 1440px;
   margin: 0px auto;
   padding: 0px 20px;
-}
-
-@media (max-width: 1024px) {
-  .container {
-    padding: 0px 18px;
-  }
-}
-
-@media (max-width: 768px) {
-  .container {
-    padding: 0px 16px;
-  }
-}
-
-@media (max-width: 640px) {
-  .container {
-    padding: 0px 14px;
-  }
-}
-
-@media (max-width: 440px) {
-  .container {
-    padding: 0px 12px;
-  }
 }

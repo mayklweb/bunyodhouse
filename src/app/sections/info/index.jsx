@@ -72,13 +72,10 @@ function Info() {
                 <h1 className="text text-[#030303] text-2xl md:text-2xl lg:text-5xl leading-[120%]">
                   Qurilishda yuqori sifatli materiallar ishlatiladi.
                 </h1>
+                <p></p>
               </div>
             </div>
-            {/* <div className="w-2/4"> */}
-            {/* <video loop autoPlay muted className="w-full h-[400px] object-cover">
-                <source src="/banner.mp4" type="video/mp4" />
-              </video> */}
-            {/* </div> */}
+
           </div>
         </div>
       </div>
