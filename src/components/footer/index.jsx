@@ -49,9 +49,9 @@ function Footer() {
                 </div>
                 <div className="flex gap-2 items-start">
                   <div className="flex gap-10 text-white text-lg lg:text-xl">
-                    <p>Instagram</p>
-                    <p>YouTube</p>
-                    <p>Telegram</p>
+                    <Link target="_blank" href={'https://instagram.com/bunyod_house'} className="text-white">Instagram</Link>
+                    <Link target="_blank" href={'https://www.youtube.com/@bunyodhouse6179'} className="text-white">YouTube</Link>
+                    <Link target="_blank" href={'https://t.me/bunyodhouse'} className="text-white">Telegram</Link>
                   </div>
                 </div>
               </div>

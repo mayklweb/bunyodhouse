@@ -1,10 +1,17 @@
 // app/layout.js yoki layout.tsx
 import "./globals.css";
-import { Inter, Montserrat } from "next/font/google";
+import { Inter, Montserrat, Roboto } from "next/font/google";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
   subsets: ["latin"],
+});
+
+const roboto = Roboto({
+  variable: "--font-roboto",
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  style: ["normal", "italic"],
 });
 
 const inter = Inter({
@@ -75,7 +82,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${montserrat.variable} ${inter.variable}`}>
+    <html lang="en" className={`${montserrat.variable} ${roboto.variable} ${inter.variable}`}>
       <body className="antialiased">{children}</body>
     </html>
   );
