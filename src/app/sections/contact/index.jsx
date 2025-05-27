@@ -1,26 +1,23 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
+import { IMaskInput } from "react-imask";
 
 function Contact() {
   const nameRef = useRef(null);
+  const selectRef = useRef(null);
   const phoneRef = useRef(null);
-  const formRef = useRef(null);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     const name = nameRef.current.value.trim();
+    const select = selectRef.current.value;
     const phone = phoneRef.current.value.trim();
-
-    if (!name || !phone) {
-      alert("Iltimos, barcha maydonlarni to'ldiring!");
-      return;
-    }
 
     const token = "8002417328:AAE6NVoyOv8inp3xTFveNwAg6X95bzcJh2c";
     const chat_id = "-4859800808";
-    const text = `Ism: ${name}\nTelefon: ${phone}`;
+    const text = `Ism: ${name}\nTelefon: ${phone}\nSavol: ${select}`;
     const url = `https://api.telegram.org/bot${token}/sendMessage`;
 
     try {
@@ -37,6 +34,7 @@ function Contact() {
 
       nameRef.current.value = "";
       phoneRef.current.value = "";
+      selectRef.current.selectedIndex = 0;
       alert("Xabar yuborildi!");
     } catch (err) {
       console.error("Telegramga yuborishda xatolik:", err);
@@ -80,20 +78,17 @@ function Contact() {
             id="map"
             className="w-full h-full absolute shadow-[inset_0px_0px_20px_10px_#ffffff]"
           ></div>
-          <div className="w-full h-full pointer-events-none shadow-[inset_0px_0px_20px_20px_#ffffff] bg-no-repeat bg-cover bg-center absolute"></div>
+          <div className="w-full h-full pointer-events-none shadow-[inset_0px_0px_20px_20px_#ffffff]  absolute"></div>
         </div>
 
         <div className="w-full lg:w-[50%]">
-          <form
-            ref={formRef}
-            onSubmit={handleSubmit}
-            className="form flex flex-col gap-6"
-          >
+          <form onSubmit={handleSubmit} className="form flex flex-col gap-6">
             <div className="flex flex-col gap-2">
               <label className="text-2xl text-[#FFC045]" htmlFor="name">
                 Ismingiz
               </label>
               <input
+                required
                 ref={nameRef}
                 className="name p-3 text-lg bg-white border-[#FFC045] border-[1px] border-solid outline-none"
                 type="text"
@@ -104,28 +99,36 @@ function Contact() {
               <label className="text-2xl text-[#FFC045]" htmlFor="phone">
                 Telefon
               </label>
-              <input
-                ref={phoneRef}
-                className="msg p-3 text-lg bg-white border-[#FFC045] border-[1px] border-solid outline-none"
-                type="text"
-                placeholder="Telefon..."
+              <IMaskInput
+                mask="+998 00 000 00 00"
+                lazy={true} // bo‘sh joylarni ham ko‘rsatadi
+                unmask={true} // qiymatni mask bilan saqlaydi
+                inputRef={phoneRef}
+                placeholder="Telefon raqamingiz..."
+                className="name p-3 text-lg bg-white border-[#FFC045] border-[1px] border-solid outline-none"
+                required
               />
+
             </div>
             <div>
               <label htmlFor="select"></label>
               <select
+                ref={selectRef}
+                required
                 className="w-full p-4 text-lg bg-white text-gray-500 border-[#FFC045] border-[1px] border-solid outline-none"
                 name="select"
                 id="select"
               >
-                <option className="bg-white" value="1">Sizga qanday yordam bera olamiz?</option>
-                <option value="2">Savol</option>
-                <option value="3">Taklif</option>
-                <option value="4">Shikoyat</option>
-                <option value="5">Boshqa</option>
+                <option className="bg-white" value="">
+                  Sizga qanday yordam bera olamiz?
+                </option>
+                <option value="Savol">Savol</option>
+                <option value="Taklif">Taklif</option>
+                <option value="Shikoyat">Shikoyat</option>
+                <option value="Boshqa">Boshqa</option>
               </select>
             </div>
-            <button className="bg-[#FFC045] text-white text-xl mt-6 p-4">
+            <button className="bg-[#FFC045] text-white text-xl mt-5 p-4 cursor-pointer">
               YUBORISH
             </button>
           </form>
