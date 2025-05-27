@@ -42,7 +42,15 @@ function About() {
     <section id="about" className="py-10">
       <div className="w-full bg-no-repeat bg-center bg-cover bg-[url('/about.webp')] flex flex-col">
         <div className="container">
-      <h1 className="text-4xl text-[#FFC045]">Biz xaqimizda</h1>
+          <h1 className="text-4xl text-[#FFC045]">Biz xaqimizda</h1>
+
+          <div className="con w-full mt-6 lg:mt-10 md:hidden">
+            <h1 className="split text-xl lg:text-4xl text-center">
+              "Bunyod House" qurilish firmasi Xorazm viloyatida 2019-yilda
+              tashkil topgan. Faoliyatimizning birinchi kunlaridan boshlab biz
+              mijozlarimizga yuqori sifatli uylarni taqdim qilib kelmoqdamiz.
+            </h1>
+          </div>
 
           <div className="w-full hidden md:block">
             <div className="con w-full mt-6 lg:mt-10 flex justify-start">
@@ -72,13 +80,7 @@ function About() {
             </div>
           </div>
 
-          <div className="con w-full mt-6 lg:mt-10 md:hidden">
-            <h1 className="split text-xl lg:text-4xl text-center">
-              "Bunyod House" qurilish firmasi Xorazm viloyatida 2019-yilda
-              tashkil topgan. Faoliyatimizning birinchi kunlaridan boshlab biz
-              mijozlarimizga yuqori sifatli uylarni taqdim qilib kelmoqdamiz.
-            </h1>
-          </div>
+
 
           <div className="w-full mt-10 grid grid-cols-2 md:grid-cols-4 gap-4">
             <div className="flex flex-col items-center justify-start">
