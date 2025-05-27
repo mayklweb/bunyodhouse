@@ -139,7 +139,7 @@ function Header({ openModal, setOpenModal }) {
             <div className="lg:hidden"></div>
 
             <div ref={navLeft} className="hidden lg:flex gap-4">
-              <Link className="text-[#FFC045]" href={"/"}>
+              <Link href={"/"}>
                 ASOSIY
               </Link>
               <Link href={"#about"}>BIZ HAQIMIZDA</Link>

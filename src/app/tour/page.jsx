@@ -88,13 +88,13 @@ const Tour = () => {
             className="p-2 bg-white text-[#ffc045] cursor-pointer"
             onClick={() => viewer.current?.setPanorama(panorama1.current)}
           >
-            OLDI
+            OLDI TOMON
           </button>
           <button
             className="p-2 bg-white text-[#ffc045] cursor-pointer"
             onClick={() => viewer.current?.setPanorama(panorama4.current)}
           >
-            ORQA
+            ORQA TOMON
           </button>
         </div>
       </div>

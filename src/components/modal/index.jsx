@@ -45,17 +45,13 @@ function Modal({ openModal, setOpenModal }) {
             aria-modal="true"
             className="fixed top-0 left-0 w-full bg-white z-40 overflow-hidden shadow-lg"
         >
-            <div className="w-full h-full flex flex-col justify-end items-center">
+            <div className="w-full h-full flex flex-col justify-end items-center border-b border-[#FFC045]">
                 {menu.map(({ id, path, text }) => (
-                    <div key={id} className="border-y border-[#FFC045] w-full p-2 text-center">
-                        <Link
-                            href={path}
-                            onClick={() => setOpenModal(false)}
-                            className="text-lg text-[#FFC045]"
-                        >
+                    <Link key={id} href={path} onClick={() => setOpenModal(false)} className="border-t border-[#FFC045] w-full p-2 text-center" >
+                        <div className="text-lg text-[#FFC045] w-full h-full">
                             {text}
-                        </Link>
-                    </div>
+                        </div>
+                    </Link>
                 ))}
             </div>
         </div>
