@@ -124,25 +124,25 @@ function Project() {
                 <img src={item.image} alt="" />
               </div>
               <div>
-                <div className="flex gap-2 text-sm md:text-base">
+                <div className="flex gap-2 text-xs md:text-base">
                   <p className="text-[#1e1e1e]">Maydon</p>
                   <span className="mb-[2%] md:mb-[1%] flex flex-auto border-b border-[#FFC045] border-dashed"></span>
                   <p>
                     110.34 m<sup>2</sup>
                   </p>
                 </div>
-                <div className="flex gap-2 text-sm md:text-base">
+                <div className="flex gap-2 text-xs md:text-base">
                   <p className="text-[#1e1e1e]">Xonalar</p>
                   <span className="mb-[2%] md:mb-[1%] flex flex-auto border-b border-[#FFC045] border-dashed"></span>
                   <p>5</p>
                 </div>
 
-                <div className="flex gap-2 text-sm md:text-base">
+                <div className="flex gap-2 text-xs md:text-base">
                   <p className="text-[#1e1e1e]">Qavat</p>
                   <span className="mb-[2%] md:mb-[1%] flex flex-auto border-b border-[#FFC045] border-dashed"></span>
                   <p>2</p>
                 </div>
-                <div className="flex gap-2 text-sm md:text-base">
+                <div className="flex gap-2 text-xs md:text-base">
                   <p className="text-[#1e1e1e]">Location</p>
                   <span className="mb-[2%] md:mb-[1%] flex flex-auto border-b border-[#FFC045] border-dashed"></span>
                   <p>{item.location}</p>

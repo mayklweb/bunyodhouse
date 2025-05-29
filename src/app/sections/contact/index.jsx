@@ -122,9 +122,10 @@ function Contact() {
                 <option className="bg-white" value="">
                   Sizga qanday yordam bera olamiz?
                 </option>
-                <option value="Savol">Savol</option>
-                <option value="Taklif">Taklif</option>
-                <option value="Shikoyat">Shikoyat</option>
+                {/* <option value="Kvartira sotib olmoqchiman">Kvartira sotib olmoqchiman.</option> */}
+                <option value="Uy sotib olmoqchiman">Uy haqida ma'lumot olmoqchiman.</option>
+                <option value="Uy sotib olmoqchiman">Uy sotib olmoqchiman.</option>
+                <option value="Ma'lumot olmoqchiman">Ma'lumot olmoqchiman.</option>
                 <option value="Boshqa">Boshqa</option>
               </select>
             </div>

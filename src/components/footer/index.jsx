@@ -43,8 +43,7 @@ function Footer() {
                 <div className="flex gap-2 items-start text-white text-lg lg:text-xl">
                   <h2>Telefon:</h2>
                   <div>
-                    <p>+998 99 999 99 99</p>
-                    <p>+998 99 999 99 99</p>
+                    <p>+998 99 501 70 70</p>
                   </div>
                 </div>
                 <div className="flex gap-2 items-start">
