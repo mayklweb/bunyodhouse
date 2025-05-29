@@ -38,6 +38,34 @@ function About() {
     });
   }, []);
 
+  useEffect(() => {
+    const counters = gsap.utils.toArray(".counter");
+
+    counters.forEach((counter) => {
+      const el = counter;
+      const endValue = parseInt(el.dataset.value || "0");
+
+      gsap.fromTo(
+        el,
+        { innerText: 0 },
+        {
+          innerText: endValue,
+          scrollTrigger: {
+            trigger: el,
+            start: "top 90%",
+          },
+          duration: 2,
+          snap: { innerText: 1 },
+          ease: "power1.out",
+          onUpdate: function () {
+            el.innerText = `${Math.floor(parseFloat(el.innerText))}+`;
+          },
+        }
+      );
+    });
+  }, []);
+
+
   return (
     <section id="about" className="py-10">
       <div className="w-full bg-no-repeat bg-center bg-cover bg-[url('/about.webp')] flex flex-col">
@@ -84,19 +112,19 @@ function About() {
 
           <div className="w-full mt-10 grid grid-cols-2 md:grid-cols-4 gap-4">
             <div className="flex flex-col items-center justify-start">
-              <p className="text-4xl lg:text-8xl">99+</p>
+              <p className="text-4xl lg:text-8xl counter" data-value="47">0+</p>
               <p className="text-sm lg:text-2xl text-center">DAN ORTIQ BAXTLI OILALAR</p>
             </div>
             <div className="flex flex-col items-center justify-start">
-              <p className="text-4xl lg:text-8xl">99+</p>
+              <p className="text-4xl lg:text-8xl counter" data-value="64">0+</p>
               <p className="text-sm lg:text-2xl text-center">XONADON</p>
             </div>
             <div className="flex flex-col items-center justify-start">
-              <p className="text-4xl lg:text-8xl">99+</p>
+              <p className="text-4xl lg:text-8xl counter" data-value="99">0+</p>
               <p className="text-sm lg:text-2xl text-center">TA MUVAFFAQIYATLI LOYIHA</p>
             </div>
             <div className="flex flex-col items-center justify-start">
-              <p className="text-4xl lg:text-8xl">99+</p>
+              <p className="text-4xl lg:text-8xl counter" data-value="99">0+</p>
               <p className="text-sm lg:text-2xl text-center">TA MUVAFFAQIYATLI LOYIHA</p>
             </div>
           </div>

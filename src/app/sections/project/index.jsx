@@ -39,38 +39,30 @@ function Project() {
     {
       id: 1,
       image: "/project.webp",
-      area: "110.34 m2",
-      location: "Urganch",
-      year: "2023",
-      type: "House",
-      room: 4,
-    },
-    {
-      id: 1,
-      image: "/project.webp",
-      area: "110.34 m2",
+      area: "69 m",
       location: "G'oybu",
-      year: "2023",
-      type: "House",
-      room: 4,
+      room: 2,
     },
     {
-      id: 1,
+      id: 2,
       image: "/project.webp",
-      area: "110.34 m2",
-      location: "Urganchu",
-      year: "2023",
-      type: "House",
-      room: 4,
+      area: "72 m",
+      location: "G'oybu",
+      room: 2,
     },
     {
-      id: 1,
+      id: 3,
       image: "/project.webp",
-      area: "110.34 m2",
+      area: "83 m",
+      location: "G'oybu",
+      room: 2,
+    },
+    {
+      id: 4,
+      image: "/project.webp",
+      area: "87 m",
       location: " G'oybu",
-      year: "2023",
-      type: "House",
-      room: 4,
+      room: 3,
     },
     // {
     //   id: 1,
@@ -128,20 +120,21 @@ function Project() {
                   <p className="text-[#1e1e1e]">Maydon</p>
                   <span className="mb-[2%] md:mb-[1%] flex flex-auto border-b border-[#FFC045] border-dashed"></span>
                   <p>
-                    110.34 m<sup>2</sup>
+                    {item.area}
+                    <sup>2</sup>
                   </p>
                 </div>
                 <div className="flex gap-2 text-xs md:text-base">
                   <p className="text-[#1e1e1e]">Xonalar</p>
                   <span className="mb-[2%] md:mb-[1%] flex flex-auto border-b border-[#FFC045] border-dashed"></span>
-                  <p>5</p>
+                  {item.room}
                 </div>
 
-                <div className="flex gap-2 text-xs md:text-base">
+                {/* <div className="flex gap-2 text-xs md:text-base">
                   <p className="text-[#1e1e1e]">Qavat</p>
                   <span className="mb-[2%] md:mb-[1%] flex flex-auto border-b border-[#FFC045] border-dashed"></span>
                   <p>2</p>
-                </div>
+                </div> */}
                 <div className="flex gap-2 text-xs md:text-base">
                   <p className="text-[#1e1e1e]">Location</p>
                   <span className="mb-[2%] md:mb-[1%] flex flex-auto border-b border-[#FFC045] border-dashed"></span>

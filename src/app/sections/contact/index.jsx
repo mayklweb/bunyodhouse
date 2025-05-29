@@ -16,7 +16,7 @@ function Contact() {
     const phone = phoneRef.current.value.trim();
 
     const token = "8002417328:AAE6NVoyOv8inp3xTFveNwAg6X95bzcJh2c";
-    const chat_id = "-4859800808";
+    const chat_id = "-4605763808";
     const text = `Ism: ${name}\nTelefon: ${phone}\nSavol: ${select}`;
     const url = `https://api.telegram.org/bot${token}/sendMessage`;
 
@@ -50,13 +50,13 @@ function Contact() {
     script.onload = () => {
       window.ymaps.ready(() => {
         const myMap = new window.ymaps.Map("map", {
-          center: [41.5599936, 60.6076249],
+          center: [41.513266, 60.607986],
           zoom: 16,
           controls: [],
         });
 
         const myPlacemark = new window.ymaps.Placemark(
-          [41.5599936, 60.6076249],
+          [41.513266, 60.607986],
           {
             hintContent: "Yandex HQ",
             balloonContent: "This is Yandex!",

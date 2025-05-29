@@ -26,6 +26,10 @@ const Tour = () => {
       const panorama6 = new PANOLENS.ImagePanorama("/tour/image-6.webp");
       const panorama7 = new PANOLENS.ImagePanorama("/tour/image-7.webp");
       const panorama8 = new PANOLENS.ImagePanorama("/tour/image-8.webp");
+      const panorama9 = new PANOLENS.ImagePanorama("/tour/image-9.webp");
+      const panorama10 = new PANOLENS.ImagePanorama("/tour/image-10.webp");
+      const panorama11 = new PANOLENS.ImagePanorama("/tour/image-11.webp");
+      const panorama12 = new PANOLENS.ImagePanorama("/tour/image-12.webp");
 
       viewer.current = new PANOLENS.Viewer({
         container: containerRef.current,
@@ -45,6 +49,10 @@ const Tour = () => {
       viewer.current.add(panorama6);
       viewer.current.add(panorama7);
       viewer.current.add(panorama8);
+      viewer.current.add(panorama9);
+      viewer.current.add(panorama10);
+      viewer.current.add(panorama11);
+      viewer.current.add(panorama12);
 
       panorama1.current.link(panorama2, new Vector3(1800, 0, 1400));
       panorama1.current.link(panorama3, new Vector3(3000, 0, 100));
@@ -61,11 +69,28 @@ const Tour = () => {
       panorama6.link(panorama7, new Vector3(-1400, 600, -1800));
       // panorama6.link(panorama7, new Vector3(1800, 0, -400));
       // panorama6.link(panorama5, new Vector3(-2400, 0, 1700));
-      panorama7.link(panorama6, new Vector3(-1800, 0, -1600));
-      panorama7.link(panorama8, new Vector3(2000, 0, -400));
-      panorama8.link(panorama7, new Vector3(-2400, 0, 400));
+      panorama7.link(panorama8, new Vector3(200, 0, -1600));
+      // panorama7.link(panorama6, new Vector3(-1800, 0, -1600));
+      panorama7.link(panorama6, new Vector3(2000, -400, 200));
 
-      viewer.current.setPanorama(panorama5.current);
+      panorama8.link(panorama7, new Vector3(-1800, 0, -200));
+      panorama8.link(panorama9, new Vector3(600, 0, 1200));
+      panorama8.link(panorama10, new Vector3(2600, 0, -200));
+
+      panorama9.link(panorama8, new Vector3(0, 0, 1600));
+      panorama9.link(panorama10, new Vector3(-1800, 0, -600));
+
+      panorama10.link(panorama8, new Vector3(-1600, 0, 1800));
+      panorama10.link(panorama9, new Vector3(-400, 0, 1600));
+      panorama10.link(panorama11, new Vector3(1400, 0, -300));
+
+      panorama11.link(panorama10, new Vector3(-1200, 0, -1000));
+      panorama11.link(panorama12, new Vector3(1400, 0, -300));
+
+      panorama12.link(panorama11, new Vector3(-1200, 0, 200));
+
+
+      viewer.current.setPanorama(panorama12);
     };
 
     loadPanolens();
