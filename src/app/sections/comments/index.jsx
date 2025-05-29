@@ -40,14 +40,14 @@ function Comments() {
                 {
                   comments.map(({ id, author, title, subtitle }) => (
                     <SwiperSlide key={id} className="w-full p-4 lg:p-6 text-white bg-[#FFC045]">
-                      <h3 className="text-3xl md:text-3xl lg:text-5xl font-semibold">
+                      <h3 className="text-2xl md:text-3xl lg:text-5xl font-semibold">
                         {title}
                       </h3>
-                      <p className="text-base md:text-lg lg:text-xl mt-2 lg:mt-4">
+                      <p className="text-md md:text-lg lg:text-xl mt-2 lg:mt-4">
                         {subtitle}
                       </p>
                       <div className="w-full mt-6 flex justify-end">
-                        <p className="text-xl lg:text-2xl">
+                        <p className="text-lg lg:text-2xl">
                           {author}
                         </p>
                       </div>
