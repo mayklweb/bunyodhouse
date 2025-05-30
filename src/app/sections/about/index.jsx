@@ -108,8 +108,6 @@ function About() {
             </div>
           </div>
 
-
-
           <div className="w-full mt-10 grid grid-cols-2 md:grid-cols-4 gap-4">
             <div className="flex flex-col items-center justify-start">
               <p className="text-4xl lg:text-8xl counter" data-value="47">0+</p>

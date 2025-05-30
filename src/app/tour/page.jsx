@@ -35,7 +35,7 @@ const Tour = () => {
         container: containerRef.current,
         autoHideInfospot: false,
         controlBar: false,
-        cameraFov: 75,
+        cameraFov: 100,
         output: 'console',
         autoRotate: false,
         horizontalView: false,
