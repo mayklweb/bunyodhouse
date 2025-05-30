@@ -1,9 +1,8 @@
 "use client";
 import { ArrowLeft } from "lucide-react";
 import dynamic from "next/dynamic";
-import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { Vector3 } from "three";
 
 
@@ -65,12 +64,11 @@ const Tour = () => {
       panorama4.link(panorama3, new Vector3(-1200, 0, -3000));
       panorama4.link(panorama2, new Vector3(-2200, 0, -2600));
       panorama5.current.link(panorama6, new Vector3(200, 0, 2800));
+
       panorama6.link(panorama5.current, new Vector3(-800, -200, -2400));
       panorama6.link(panorama7, new Vector3(-1400, 600, -1800));
-      // panorama6.link(panorama7, new Vector3(1800, 0, -400));
-      // panorama6.link(panorama5, new Vector3(-2400, 0, 1700));
+
       panorama7.link(panorama8, new Vector3(200, 0, -1600));
-      // panorama7.link(panorama6, new Vector3(-1800, 0, -1600));
       panorama7.link(panorama6, new Vector3(2000, -400, 200));
 
       panorama8.link(panorama7, new Vector3(-1800, 0, -200));
