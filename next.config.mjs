@@ -1,4 +1,13 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {};
+// next.config.mjs
+import { createRequire } from 'module';
+const require = createRequire(import.meta.url);
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.ANALYZE === 'true',
+});
 
-export default nextConfig;
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  // your config here
+};
+
+export default withBundleAnalyzer(nextConfig);

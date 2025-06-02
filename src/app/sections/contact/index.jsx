@@ -7,6 +7,9 @@ function Contact() {
   const nameRef = useRef(null);
   const selectRef = useRef(null);
   const phoneRef = useRef(null);
+  const mapRef = useRef(null);
+  const placemarkRef = useRef(null);
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -46,34 +49,62 @@ function Contact() {
     const script = document.createElement("script");
     script.src =
       "https://api-maps.yandex.ru/2.1/?apikey=YOUR_API_KEY_HERE&lang=ru_RU";
-    script.type = "text/javascript";
     script.onload = () => {
       window.ymaps.ready(() => {
-        const myMap = new window.ymaps.Map("map", {
-          center: [41.513266, 60.607986],
+        const initialCoords = [41.513266, 60.607986];
+        const map = new window.ymaps.Map("map", {
+          center: initialCoords,
           zoom: 16,
           controls: [],
         });
 
-        const myPlacemark = new window.ymaps.Placemark(
-          [41.513266, 60.607986],
-          {
-            hintContent: "Yandex HQ",
-            balloonContent: "This is Yandex!",
-          }
-        );
+        const placemark = new window.ymaps.Placemark(initialCoords, {
+          hintContent: "Bino",
+          balloonContent: "Bu bino joylashuvi",
+        });
 
-        myMap.geoObjects.add(myPlacemark);
+        map.geoObjects.add(placemark);
+
+        mapRef.current = map;
+        placemarkRef.current = placemark;
       });
     };
     document.body.appendChild(script);
   }, []);
 
+  // 🧭 Location update function
+  const changeLocation = (coords) => {
+    if (mapRef.current && placemarkRef.current) {
+      mapRef.current.setCenter(coords, 16);
+      placemarkRef.current.geometry.setCoordinates(coords);
+    }
+  };
+
   return (
     <section id="contact" className="mt-10 container">
-      <h1 className="text-4xl text-[#FFC045]">Aloqa</h1>
+
       <div className="w-full mt-10 flex flex-col-reverse lg:flex-row gap-10 relative">
         <div className="w-full lg:w-[50%] h-[400px] relative shadow-[inset_0px_0px_20px_10px_#ffffff]">
+          <div className="z-10 w-full flex gap-2 mt-5">
+            <button
+              onClick={() => changeLocation([41.513266, 60.607986])}
+              className="bg-[#FFC045] text-white py-4 w-full border-[1px]"
+            >
+              Birinchi bino
+            </button>
+            <button
+              onClick={() => changeLocation([41.514000, 60.608500])}
+              className="bg-[#FFC045] text-white py-4 w-full border-[1px]"
+            >
+              Ikkinchi bino
+            </button>
+            <button
+              onClick={() => changeLocation([41.512000, 60.606000])}
+              className="bg-[#FFC045] text-white py-4 w-full border-[1px]"
+            >
+              Uchunchi bino
+            </button>
+          </div>
           <div
             id="map"
             className="w-full h-full absolute shadow-[inset_0px_0px_20px_10px_#ffffff]"
@@ -82,7 +113,8 @@ function Contact() {
         </div>
 
         <div className="w-full lg:w-[50%]">
-          <form onSubmit={handleSubmit} className="form flex flex-col gap-6">
+          {/* <h1 className="text-4xl text-[#FFC045]">Aloqa</h1> */}
+          <form onSubmit={handleSubmit} className="form flex flex-col gap-6 mt-5">
             <div className="flex flex-col gap-2">
               <label className="text-2xl text-[#FFC045]" htmlFor="name">
                 Ismingiz

@@ -21,7 +21,7 @@ function Footer() {
               </p> */}
             </div>
             <div className="flex flex-col gap-4 mt-4">
-              <h1 className="text-white text-2xl lg:text-4xl">Sayt haritasi</h1>
+              <h1 className="text-[#FFC045] text-2xl lg:text-4xl">Sayt haritasi</h1>
               <div className="grid grid-cols-2 gap-3 text-white text-lg lg:text-xl">
                 <Link href={'/'}>Asosiy</Link>
                 <Link href={'#info'}>Faoliyat</Link>
@@ -32,7 +32,7 @@ function Footer() {
               </div>
             </div>
             <div className="flex flex-col gap-4 mt-4">
-              <h1 className="text-white text-2xl lg:text-4xl">Aloqa</h1>
+              <h1 className="text-[#FFC045] text-2xl lg:text-4xl">Aloqa</h1>
               <div className="flex flex-col gap-4">
                 <div className="flex gap-2 items-start text-white text-lg lg:text-xl">
                   <h2>Manzil:</h2>

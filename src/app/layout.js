@@ -1,10 +1,10 @@
-// app/layout.js yoki layout.tsx
 import "./globals.css";
-import { Inter, Montserrat, Roboto } from "next/font/google";
+import { Aboreto, Roboto } from "next/font/google";
 
-const montserrat = Montserrat({
-  variable: "--font-montserrat",
+const aboreto = Aboreto({
+  weight: "400",
   subsets: ["latin"],
+  variable: "--font-aboreto", 
 });
 
 const roboto = Roboto({
@@ -12,17 +12,6 @@ const roboto = Roboto({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
   style: ["normal", "italic"],
-});
-
-const inter = Inter({
-  variable: "--font-inter",
-  display: "swap",
-  preload: true,
-  adjustFontFallback: true,
-  fallback: ["system-ui", "sans-serif"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-  style: ["normal", "italic"],
-  subsets: ["latin"],
 });
 
 export const metadata = {
@@ -82,7 +71,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${montserrat.variable} ${roboto.variable} ${inter.variable}`}>
+    <html lang="en" className={`${aboreto.variable}  ${roboto.variable} `}>
       <body className="antialiased">{children}</body>
     </html>
   );
