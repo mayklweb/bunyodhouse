@@ -6,6 +6,7 @@ import { About, Banner, Comments, Contact, Project } from "@/app/sections";
 import Info from "@/app/sections/info";
 import { useState } from "react";
 import Apartment from "./sections/apartment";
+import House from "./sections/house";
 
 export default function Home() {
   const [openModal, setOpenModal] = useState(false);
@@ -19,6 +20,7 @@ export default function Home() {
         <About />
         <Apartment/>
         <Info />
+        <House/>
         <Comments />
         <Contact />
       </main>
