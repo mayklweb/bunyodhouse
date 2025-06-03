@@ -14,8 +14,8 @@ export default function Home() {
       <Header openModal={openModal} setOpenModal={setOpenModal} />
       <main>
         <Banner />
-        <About />
         <Project />
+        <About />
         <Info />
         <Comments />
         <Contact />

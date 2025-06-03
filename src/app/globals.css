@@ -1,7 +1,14 @@
 @import "tailwindcss";
 :root {
-  --font-aboreto: 'Aboreto';
+  --font-aboreto:  'Aboreto';
   --font-roboto: 'Roboto', sans-serif;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-aboreto: var(--font-aboreto);
+  --font-gayathri: var(--font-gayathri);
 }
 
 html,

@@ -1,17 +1,17 @@
 import "./globals.css";
 import { Aboreto, Roboto } from "next/font/google";
 
-const aboreto = Aboreto({
-  weight: "400",
-  subsets: ["latin"],
-  variable: "--font-aboreto", 
-});
-
 const roboto = Roboto({
   variable: "--font-roboto",
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
   style: ["normal", "italic"],
+});
+
+const aboreto = Aboreto({
+  weight: "400",
+  subsets: ["latin-ext", "latin"],
+  variable: "--font-aboreto",
 });
 
 export const metadata = {
@@ -71,7 +71,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${aboreto.variable}  ${roboto.variable} `}>
+    <html lang="en" className={`${roboto.variable} ${aboreto.variable}`}>
       <body className="antialiased">{children}</body>
     </html>
   );

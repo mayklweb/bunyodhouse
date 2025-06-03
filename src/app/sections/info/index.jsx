@@ -40,36 +40,36 @@ function Info() {
   }, []);
 
   return (
-    <section id="info">
-      <div className="scene py-10">
+    <section id="info ">
+      <div className="scene py-10 md:bg-[url('/info.webp')] bg-no-repeat bg-[position:114%_bottom] bg-[length:100%_100%] md:bg-[length:60%_100%] lg:bg-[length:60%_100%]">
         <div className="container py-20 ">
           <h1 className="text-4xl text-[#FFC045]">Faoliyat</h1>
-          <div className="flex gap-10 mt-10  md:bg-[url('/info.webp')] bg-no-repeat bg-right bg-[length:100%_100%] md:bg-[length:60%_100%] lg:bg-[length:50%_100%]">
-            <div className="w-full md:w-3/4 lg:w-3/5 flex flex-col gap-10">
-              <div className="con w-full flex gap-2 md:gap-2">
-                <h1 className="text text-[#FFC045] text-2xl md:text-2xl lg:text-5xl leading-[120%]">
+          <div className="flex gap-10 mt-10  ">
+            <div className="w-full md:w-3/4 lg:w-5/7 flex flex-col gap-10">
+              <div className="con w-full flex gap-2 md:gap-2 font-aboreto">
+                <h1 className="text text-[#FFC045] text-2xl md:text-2xl lg:text-4xl leading-[120%]">
                   01.
                 </h1>
-                <h1 className="w-full text text-[#030303] text-2xl md:text-2xl lg:text-5xl leading-[120%]">
+                <h1 className="w-full text text-[#030303] text-2xl md:text-2xl lg:text-4xl leading-[120%]">
                   "Bunyod House" uylari o'zining zamonaviy dizayni bilan ajralib
                   turadi.
                 </h1>
               </div>
 
-              <div className="con w-full flex gap-2 md:gap-2">
-                <h1 className="text text-[#FFC045] text-2xl md:text-2xl lg:text-5xl leading-[120%]">
+              <div className="con w-full flex gap-2 md:gap-2 font-aboreto">
+                <h1 className="text text-[#FFC045] text-2xl md:text-2xl lg:text-4xl leading-[120%]">
                   02.
                 </h1>
-                <h1 className="text text-[#030303] text-2xl md:text-2xl lg:text-5xl leading-[120%]">
+                <h1 className="text text-[#030303] text-2xl md:text-2xl lg:text-4xl leading-[120%]">
                   Biz mijozlarimiz uchun eng qulay narxlarni taqdim etamiz.
                 </h1>
               </div>
 
-              <div className="con w-full  flex gap-2 md:gap-2">
-                <h1 className="text text-[#FFC045] text-2xl md:text-2xl lg:text-5xl leading-[120%]">
+              <div className="con w-full font-aboreto flex gap-2 md:gap-2">
+                <h1 className="text text-[#FFC045] text-2xl md:text-2xl lg:text-4xl leading-[120%]">
                   03.
                 </h1>
-                <h1 className="text text-[#030303] text-2xl md:text-2xl lg:text-5xl leading-[120%]">
+                <h1 className="text text-[#030303] text-2xl md:text-2xl lg:text-4xl leading-[120%] ">
                   Qurilishda yuqori sifatli materiallar ishlatiladi.
                 </h1>
                 <p></p>

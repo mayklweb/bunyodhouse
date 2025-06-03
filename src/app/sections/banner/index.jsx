@@ -12,7 +12,7 @@ function Banner() {
             <source src="/banner.mp4" type="video/mp4" />
           </video>
           <div className="w-full absolute top-6/8 left-1/2 h-full -translate-x-2/4 -translate-y-2/4 flex flex-col items-center justify-center">
-            <Link href={'/tour'} className="w-[300px] h-[60px] text-[#FFC045] bg-white text-xl flex items-center justify-center border cursor-pointer hover:scale-110 transition-all duration-500">360° TOUR</Link>
+            <Link href={'/tour'} className="w-[300px] h-[60px] text-[#FFC045] bg-white text-xl flex items-center justify-center border cursor-pointer hover:scale-110 transition-all duration-500">360° SAYOHAT</Link>
           </div>
         </div>
       </div>

@@ -58,10 +58,8 @@ function Header({ openModal, setOpenModal }) {
     });
 
     tl.to(header.current, {
-      height: isMobile ? "80px" : "120px",
+      height: isMobile ? "80px" : "100px",
       duration: 3,
-      // backgroundColor: "transparent",
-      // backdropFilter: "blur(10px)",/
     }, "end");
 
     tl.to(
@@ -180,7 +178,7 @@ function Header({ openModal, setOpenModal }) {
             </button>
 
             <div ref={navRight} className="hidden lg:flex gap-4">
-              <Link href={"/tour"}>TOUR</Link>
+              <Link href={"/tour"}>360° SAYOHAT</Link>
               <Link href={"#info"}>FAOLIYAT</Link>
               <Link href={"#contact"}>ALOQA</Link>
             </div>
