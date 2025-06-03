@@ -18,7 +18,7 @@ function House() {
 
   return (
     <div ref={embedRef}>
-      <iframe src="https://www.instagram.com/reel/DG-5GR_sjXG/"></iframe>
+      {/* <iframe src="https://www.instagram.com/reel/DG-5GR_sjXG/"></iframe> */}
     </div>
   );
 }
