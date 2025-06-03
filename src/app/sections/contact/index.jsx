@@ -84,7 +84,7 @@ function Contact() {
     <section id="contact" className="mt-10 container">
       <div className="w-full flex flex-col-reverse lg:flex-row gap-10 relative">
         <div className="w-full lg:w-[50%] h-[400px] relative shadow-[inset_0px_0px_20px_10px_#ffffff]">
-        <div className="z-10 w-full flex gap-2 mt-5">
+        <div className="z-10 w-full flex gap-2 mt-2">
           <button
             onClick={() => changeLocation([41.513266, 60.607986])}
             className="bg-[#FFC045] text-white py-4 w-full border-[1px]"
@@ -106,14 +106,14 @@ function Contact() {
         </div>
           <div
             id="map"
-            className="w-full h-[320px] mt-5 absolute shadow-[inset_0px_0px_20px_10px_#ffffff]"
+            className="w-full h-[340px] mt-5 absolute shadow-[inset_0px_0px_20px_10px_#ffffff]"
           ></div>
-          <div className="w-full h-[320px] mt-5 pointer-events-none shadow-[inset_0px_0px_20px_20px_#ffffff]  absolute"></div>
+          <div className="w-full h-[340px] mt-5 pointer-events-none shadow-[inset_0px_0px_20px_20px_#ffffff]  absolute"></div>
         </div>
 
         <div className="w-full lg:w-[50%]">
           {/* <h1 className="text-4xl text-center text-[#FFC045]">Aloqa</h1> */}
-          <form onSubmit={handleSubmit} className="form flex flex-col gap-6 mt-5">
+          <form onSubmit={handleSubmit} className="form flex flex-col gap-6 ">
             <div className="flex flex-col gap-2">
               <label className="text-2xl text-[#FFC045]" htmlFor="name">
                 Ismingiz
