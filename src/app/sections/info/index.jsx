@@ -42,9 +42,9 @@ function Info() {
   return (
     <section id="info ">
       <div className="scene py-10 md:bg-[url('/info.webp')] bg-no-repeat bg-[position:114%_bottom] bg-[length:100%_100%] md:bg-[length:60%_100%] lg:bg-[length:60%_100%]">
-        <div className="container py-20 ">
-          <h1 className="text-4xl text-[#FFC045]">Faoliyat</h1>
-          <div className="flex gap-10 mt-10  ">
+        <div className="container py-10">
+          <h1 className="text-2xl lg:text-4xl text-[#FFC045]">Faoliyat</h1>
+          <div className="flex gap-10 mt-5 lg:mt-10">
             <div className="w-full md:w-3/4 lg:w-5/7 flex flex-col gap-10">
               <div className="con w-full flex gap-2 md:gap-2 font-aboreto">
                 <h1 className="text text-[#FFC045] text-2xl md:text-2xl lg:text-4xl leading-[120%]">

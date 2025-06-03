@@ -70,9 +70,9 @@ function About() {
     <section id="about" className="py-10">
       <div className="w-full bg-no-repeat bg-center bg-cover bg-[url('/about.webp')] flex flex-col">
         <div className="container">
-          <h1 className="text-4xl text-[#FFC045]">Biz xaqimizda</h1>
+          <h1 className="text-2xl lg:text-4xl text-[#FFC045]">Biz xaqimizda</h1>
 
-          <div className="con w-full mt-6 lg:mt-10 md:hidden">
+          <div className="con w-full mt-5 lg:mt-10 md:hidden">
             <h1 className="split text-lg lg:text-4xl text-center font-aboreto">
               "Bunyod House" qurilish firmasi Xorazm viloyatida 2019-yilda
               tashkil topgan. Faoliyatimizning birinchi kunlaridan boshlab biz

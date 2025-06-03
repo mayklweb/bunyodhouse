@@ -81,34 +81,34 @@ function Contact() {
   };
 
   return (
-    <section id="contact" className="mt-10 container">
-      <div className="w-full flex flex-col-reverse lg:flex-row gap-10 relative">
-        <div className="w-full lg:w-[50%] h-[400px] relative shadow-[inset_0px_0px_20px_10px_#ffffff]">
-        <div className="z-10 w-full flex gap-2 mt-2">
-          <button
-            onClick={() => changeLocation([41.513266, 60.607986])}
-            className="bg-[#FFC045] text-white py-4 w-full border-[1px]"
-          >
-            Birinchi bino
-          </button>
-          <button
-            onClick={() => changeLocation([41.514000, 60.608500])}
-            className="bg-[#FFC045] text-white py-4 w-full border-[1px]"
-          >
-            Ikkinchi bino
-          </button>
-          <button
-            onClick={() => changeLocation([41.512000, 60.606000])}
-            className="bg-[#FFC045] text-white py-4 w-full border-[1px]"
-          >
-            Uchunchi bino
-          </button>
-        </div>
+    <section id="contact" className="container">
+      <div className="w-full flex flex-col-reverse lg:flex-row gap-10 relative mt-10">
+        <div className="w-full lg:w-[50%] h-[400px] relative">
+          <div className="z-10 w-full flex gap-2 mt-2">
+            <button
+              onClick={() => changeLocation([41.513266, 60.607986])}
+              className="text-sm lg:text-lg bg-[#FFC045] text-white py-2 lg:py-4 w-full border-[1px] cursor-pointer hover:bg-transparent hover:text-[#ffc045] transition-all duration-200 ease-in-out"
+            >
+              Birinchi bino
+            </button>
+            <button
+              onClick={() => changeLocation([41.514000, 60.608500])}
+              className="text-sm lg:text-lg bg-[#FFC045] text-white py-2 lg:py-4 w-full border-[1px] cursor-pointer hover:bg-transparent hover:text-[#ffc045] transition-all duration-200 ease-in-out"
+            >
+              Ikkinchi bino
+            </button>
+            <button
+              onClick={() => changeLocation([41.512000, 60.606000])}
+              className="text-sm lg:text-lg bg-[#FFC045] text-white py-2 lg:py-4 w-full border-[1px] cursor-pointer hover:bg-transparent hover:text-[#ffc045] transition-all duration-200 ease-in-out"
+            >
+              Uchunchi bino
+            </button>
+          </div>
           <div
             id="map"
-            className="w-full h-[340px] mt-5 absolute shadow-[inset_0px_0px_20px_10px_#ffffff]"
+            className="w-full h-[340px] mt-5 absolute"
           ></div>
-          <div className="w-full h-[340px] mt-5 pointer-events-none shadow-[inset_0px_0px_20px_20px_#ffffff]  absolute"></div>
+          <div className="w-full h-[340px] mt-5 pointer-events-none shadow-[inset_0px_0px_20px_40px_#ffffff]  absolute"></div>
         </div>
 
         <div className="w-full lg:w-[50%]">
@@ -160,7 +160,7 @@ function Contact() {
                 <option value="Boshqa">Boshqa</option>
               </select>
             </div>
-            <button className="bg-[#FFC045] text-white text-xl mt-5 p-4 cursor-pointer">
+            <button className="bg-[#FFC045] text-white text-xl mt-5 p-4 cursor-pointer border-[1px] border-solid border-[#ffc045] hover:bg-transparent hover:text-[#ffc045] transition-all duration-300 ease-in-out">
               YUBORISH
             </button>
           </form>
