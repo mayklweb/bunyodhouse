@@ -1,12 +1,29 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   experimental: {
-    turbo: true,
-    optimizePackageImports: ['gsap', 'swiper', 'panolens', 'three', 'next', 'compression', 'lucide-react', '@tailwindcss/postcss', 'tailwindcss'],
+    optimizePackageImports: [
+      "gsap",
+      "swiper",
+      "panolens",
+      "three",
+      "lucide-react",
+    ],
     optimisticClientCache: true,
-    optimizeCss: true,
-    optimizeServerReact: true
+    optimizeCss: true, // Note it's optimizeCss (with one 's') in newer versions
+    serverComponentsExternalPackages: ["compression"], // If you need server components to use this
   },
-}
+  compiler: {
+    // see https://styled-components.co`m/docs/tooling#babel-plugin for more info on the options.
+    styledComponents: {
+      displayName: true,
+      ssr: true,
+      fileName: true,
+      minify: true,
+      transpileTemplateLiterals: true,
+      pure: true,
+      cssProp: true,
+    },
+  },
+};
 
-export default nextConfig
+export default nextConfig;
