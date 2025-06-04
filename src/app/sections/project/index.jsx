@@ -10,7 +10,7 @@ function Project() {
   const handleNavigate = () => {
     navigate.push('#contact')
   }
- 
+
   const data = [
     {
       location: "Urganch, G'oybu",
@@ -49,7 +49,7 @@ function Project() {
                       <h3 className='text-lg'>{location}</h3>
                       <p className='text-sm'>{stock}</p>
                     </div>
-                    <button onClick={() => handleNavigate()} className='w-full h-10 mt-2 text-white bg-[#ffc045] cursor-pointer' href={'#contact'}>Ko'proq</button>
+                    <button onClick={() => handleNavigate()} className='w-full h-10 mt-2 text-white bg-[#ffc045] cursor-pointer border-[1px] border-solid border-[#ffc045] hover:bg-transparent hover:text-[#ffc045] transition-all duration-300 ease-in-out' href={'#contact'}>Ko'proq</button>
                   </div>
                 </div>
 

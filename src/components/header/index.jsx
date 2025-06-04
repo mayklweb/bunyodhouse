@@ -137,11 +137,11 @@ function Header({ openModal, setOpenModal }) {
             <div className="lg:hidden"></div>
 
             <div ref={navLeft} className="hidden lg:flex gap-4">
-              <Link href={"/"}>
+              <Link className="hover:text-[#ffc045] transition-all duration-300 ease-in-out" href={"/"}>
                 ASOSIY
               </Link>
-              <Link href={"#about"}>BIZ HAQIMIZDA</Link>
-              <Link href={"#projects"}>XONADONLAR</Link>
+              <Link className="hover:text-[#ffc045] transition-all duration-300 ease-in-out" href={"#about"}>BIZ HAQIMIZDA</Link>
+              <Link className="hover:text-[#ffc045] transition-all duration-300 ease-in-out" href={"#projects"}>XONADONLAR</Link>
             </div>
 
             <div className="top-2/4 left-2/4 transform-gpu -translate-x-2/4 -translate-y-2/4 absolute">
@@ -178,9 +178,9 @@ function Header({ openModal, setOpenModal }) {
             </button>
 
             <div ref={navRight} className="hidden lg:flex gap-4">
-              <Link href={"/tour"}>360° SAYOHAT</Link>
-              <Link href={"#info"}>FAOLIYAT</Link>
-              <Link href={"#contact"}>ALOQA</Link>
+              <Link className="hover:text-[#ffc045] transition-all duration-300 ease-in-out" href={"/tour"}>360° SAYOHAT</Link>
+              <Link className="hover:text-[#ffc045] transition-all duration-300 ease-in-out" href={"#info"}>FAOLIYAT</Link>
+              <Link className="hover:text-[#ffc045] transition-all duration-300 ease-in-out" href={"#contact"}>ALOQA</Link>
             </div>
           </div>
         </div>

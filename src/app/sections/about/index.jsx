@@ -73,7 +73,7 @@ function About() {
           <h1 className="text-2xl lg:text-4xl text-[#FFC045]">Biz xaqimizda</h1>
 
           <div className="con w-full mt-5 lg:mt-10 md:hidden">
-            <h1 className="split text-lg lg:text-4xl text-center font-aboreto">
+            <h1 className="split text-base lg:text-4xl text-center font-aboreto">
               "Bunyod House" qurilish firmasi Xorazm viloyatida 2019-yilda
               tashkil topgan. Faoliyatimizning birinchi kunlaridan boshlab biz
               mijozlarimizga yuqori sifatli uylarni taqdim qilib kelmoqdamiz.
