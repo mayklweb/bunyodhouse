@@ -15,7 +15,9 @@ const aboreto = Aboreto({
 });
 
 export const metadata = {
+  metadataBase: new URL('https://www.bunyodhouse.uz'),
   title: "Bunyod House | Xorazm, Urganch",
+  description: "Bunyod House - Xorazm viloyatida arzon va sifatli uylar qurish bilan shug'ullanadi. Bizning uylarimiz zamonaviy dizayni va sifatli materiallari bilan ajralib turadi. Biz mijozlarimizga eng yaxshi xizmatni taqdim etishga intilamiz.",
   icons: {
     icon: "/logo.svg",
     shortcut: "/logo.svg",
@@ -29,10 +31,8 @@ export const metadata = {
       url: "https://bunyodhouse.uz",
     },
   ],
-  creator: "Bunyod House",
-  publisher: "Bunyod House",
-  description:
-    "Bunyod House - Xorazm viloyatida arzon va sifatli uylar qurish bilan shug'ullanadi. Bizning uylarimiz zamonaviy dizayni va sifatli materiallari bilan ajralib turadi. Biz mijozlarimizga eng yaxshi xizmatni taqdim etishga intilamiz.",
+  creator: "МАЙКЛ",
+  publisher: "МАЙКЛ",
   openGraph: {
     title: "Bunyod House | Xorazm, Urganch",
     description:
@@ -41,19 +41,11 @@ export const metadata = {
     siteName: "Bunyod House",
     images: [
       {
-        url: "/logo.svg",
+        url: "/favicon.iso",
         width: 800,
         height: 600,
       },
     ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Bunyod House | Xorazm, Urganch",
-    description:
-      "Bunyod House - Xorazm viloyatida arzon va sifatli uylar qurish bilan shug'ullanadi...",
-    images: ["/logo.svg"],
-    creator: "@bunyodhouse",
   },
   alternates: {
     en: "https://bunyodhouse.uz",

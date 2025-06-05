@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import SplitText from "gsap/SplitText";
+import Image from "next/image";
 
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
@@ -37,28 +38,28 @@ function Apartment() {
   const data = [
     {
       id: 1,
-      image: "/project.webp",
+      image: "/arch.webp",
       area: "69 m",
       location: "G'oybu",
       room: 2,
     },
     {
       id: 2,
-      image: "/project.webp",
+      image: "/arch.webp",
       area: "72 m",
       location: "G'oybu",
       room: 2,
     },
     {
       id: 3,
-      image: "/project.webp",
+      image: "/arch.webp",
       area: "83 m",
       location: "G'oybu",
       room: 2,
     },
     {
       id: 4,
-      image: "/project.webp",
+      image: "/arch.webp",
       area: "87 m",
       location: " G'oybu",
       room: 3,
@@ -76,7 +77,7 @@ function Apartment() {
               className={`card w-full p-2 md:p-4 border border-[#FFC045] flex flex-col gap-2 shadow-md`}
             >
               <div>
-                <img src={item.image} alt="" />
+                <Image className="w-full h-full" width={250} height={360} src={item.image} alt="Apartment image" loading='lazy' />
               </div>
               <div>
                 <div className="flex gap-2 text-xs md:text-base">

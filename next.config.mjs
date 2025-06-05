@@ -13,7 +13,6 @@ const nextConfig = {
     serverComponentsExternalPackages: ["compression"], // If you need server components to use this
   },
   compiler: {
-    // see https://styled-components.co`m/docs/tooling#babel-plugin for more info on the options.
     styledComponents: {
       displayName: true,
       ssr: true,
