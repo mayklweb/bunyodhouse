@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   experimental: {
+    // serverComponentsExternalPackages: ['some-package'],
     optimizePackageImports: [
       "gsap",
       "swiper",
@@ -10,7 +11,7 @@ const nextConfig = {
     ],
     optimisticClientCache: true,
     optimizeCss: true, // Note it's optimizeCss (with one 's') in newer versions
-    serverComponentsExternalPackages: ["compression"], // If you need server components to use this
+    // serverComponentsExternalPackages: ["compression"], // If you need server components to use this
   },
   compiler: {
     styledComponents: {
