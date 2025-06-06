@@ -7,25 +7,26 @@ function Project() {
 
   const navigate = useRouter()
 
+
   const handleNavigate = () => {
     navigate.push('#contact')
   }
 
   const data = [
     {
-      location: "Urganch, G'oybu",
+      location: "Urganch sh, G'oybu Kollej",
       stock: "17/30 Honadon",
       img: "/project-1.1.webp",
       busy: "Jarayonda",
     },
     {
-      location: "Urganch, G'oybu",
+      location: "Urganch sh, G'oybu",
       stock: "29/50 Kvartira",
       img: "/project-2.webp",
       busy: "Yakunlangan",
     },
     {
-      location: "Urganch, G'oybu",
+      location: "Urganch sh, Versal",
       stock: "37/50 kvartira",
       img: "/project-3.webp",
       busy: "Jarayonda",
@@ -42,7 +43,7 @@ function Project() {
                 <div key={i} className='w-full bg-white'>
                   <div className='w-full relative'>
                     <p className='text-xs text-white px-2 absolute top-0 left-0 bg-[#ffc045]'>{busy}</p>
-                    <Image className='w-auto h-auto object-cover object-center' src={img} width={700} height={260} loading='lazy' alt="Project image" />
+                    <Image className='w-агдд h-[260px] object-cover object-center' src={img} width={700} height={260} loading='lazy' alt="Project image" />
                   </div>
                   <div className='w-full'>
                     <div className='flex justify-between items-center mt-2'>

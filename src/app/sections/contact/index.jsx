@@ -92,17 +92,17 @@ function Contact() {
               Birinchi bino
             </button>
             <button
-              onClick={() => changeLocation([41.514000, 60.608500])}
+              onClick={() => changeLocation([41.528585, 60.608650])}
               className="text-sm lg:text-lg bg-[#FFC045] text-white py-2 lg:py-4 w-full border-[1px] cursor-pointer hover:bg-transparent hover:text-[#ffc045] transition-all duration-200 ease-in-out"
             >
               Ikkinchi bino
             </button>
-            <button
+            {/* <button
               onClick={() => changeLocation([41.512000, 60.606000])}
               className="text-sm lg:text-lg bg-[#FFC045] text-white py-2 lg:py-4 w-full border-[1px] cursor-pointer hover:bg-transparent hover:text-[#ffc045] transition-all duration-200 ease-in-out"
             >
               Uchunchi bino
-            </button>
+            </button> */}
           </div>
           <div
             id="map"
